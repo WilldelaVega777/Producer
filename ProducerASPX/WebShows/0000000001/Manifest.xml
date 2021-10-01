@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebShowManifest  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Specs\WebShowSpec.xsd" 
+                  WebShowName="The Most Inconvenient Truth" 
+                  WebShowAuthor="Carl Carpenter" 
+                  WebShowDate="11/22/2007" 
+                  WebShowVersion="2.0" 
+                  InitialVideoWindowX="760" 
+                  InitialVideoWindowY="17" 
+                  InitialVideoWindowWidth="140" 
+                  InitialVideoWindowHeight="160" 
+                  InitialVideoWindowSource="/WebShows/0000000001/Resources/WebShowVideo.wmv" 
+                  BasePath="/WebShows/0000000001/" 
+                  BottomBarDefaultColor="#cc000000"
+                  BottomBarDefaultOpacity=".4">
+	<WebSlides>
+
+    <WebSlide>
+      <Thumbnail FrameID="001" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Behold"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide1.jpg"/>        
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="002" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Laying waste"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide2.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+			<Thumbnail FrameID="003" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Agent Smith"/>
+			<Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide3.jpg"/>
+        <Asset ID="QuoteText" Value="Quotetext.png"/>
+      </Assets>
+      <SurfMenu Left="-43" Top="239" Resource="WayvSL2.Components.Skins.SurfMenu.SurfMenuWebslide3.xaml"/>
+      <WatchClip Left="4" Top="466" VideoClip="/WebShows/0000000001/Resources/WatchClips/Matrix.wmv"/>
+		</WebSlide>
+	
+		<WebSlide>
+			<Thumbnail FrameID="004" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="A Virus"/>
+			<Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide4.jpg"/>
+      </Assets>
+		</WebSlide>    
+      
+		<WebSlide>
+			<Thumbnail FrameID="005" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Global self"/>
+			<Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide5.jpg"/>
+        <Asset ID="GlobalSelfTextOverlay" Value="GlobalSelfText.png"/>
+        <Asset ID="BinaryMatrixTextOverlay" Value="BinaryMatrix.png"/>
+      </Assets>
+		</WebSlide>
+	
+		<WebSlide>
+			<Thumbnail FrameID="006" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Barely conscious"/>
+			<Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="VideoFrame06.wmv"/>
+      </Assets>
+		</WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="007" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="James Lovelock"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide7.jpg"/>
+        <Asset ID="QuoteText" Value="QuoteText.png"/>
+        <Asset ID="GaiaText" Value="GaiaText.png"/>
+        <Asset ID="GaiaText2" Value="GaiaText2.png"/>
+      </Assets>
+      <SurfMenu Left="-43" Top="300" Resource="WayvSL2.Components.Skins.SurfMenu.SurfMenuWebslide7.xaml"/>
+    </WebSlide>
+
+    <WebSlide>
+     <Thumbnail FrameID="008" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Tipping Point"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide8.jpg"/>
+        <Asset ID="PastTippingPointText" Value="PastTippingPointText.png"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="009" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Gone"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide9.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="010" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Biocide"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide10.jpg"/>
+      </Assets>
+      <SurfMenu Left="-43" Top="410" Resource="WayvSL2.Components.Skins.SurfMenu.SurfMenuWebslide10.xaml"/>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="011" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Amphibians"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide11.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="012" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="70 species gone"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide12.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+			<Thumbnail FrameID="013" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Independent Report"/>
+			<Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide13.jpg"/>
+        <Asset ID="QuotePane" Value="QuotePane.png"/>
+      </Assets>
+			<PageLink Url="http://www.independent.co.uk/environment/article2494659.ece" InitialButtonDelayTime="00:00:07" Top="376" Left="-26" />
+		</WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="014" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Mass Extinction"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide14.jpg"/>
+        <Asset ID="EXTINCTION" Value="EXTINCTION.png"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="015" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Carnivores 1"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide15.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="016" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Carnivores 2"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide16.jpg"/>
+      </Assets>
+      <SurfMenu Left="-25" Top="410" Resource="WayvSL2.Components.Skins.SurfMenu.SurfMenuWebslide16.xaml"/>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="017" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Herbivores"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide17.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="018" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Human Brain"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Null.jpg"/>
+        <Asset ID="OMovingBackground" Value="Webslide18.jpg"/>
+        <Asset ID="SaberTooth" Value="SaberToothSpecter.png"/>
+      </Assets>
+    </WebSlide>   
+	
+		<WebSlide>
+			<Thumbnail FrameID="019" ImageSource="/WebShows/0000000001/Resources/Thumbnails/Default.jpg" FrameText="Conversational Poll"/>
+			<Assets>
+				<Asset ID="OBackground" Value="Webslide19.jpg"/>
+			</Assets>
+			<ConversationalPoll DefaultFontSize="20" EndMessage="Thanks for participating" DefaultQuestionMargin="300" DefaultAnswerMargin="90">
+				<Questions>
+				  <Question Id="1">
+					<QuestionTexts>
+					  <QuestionText Text="Were you aware of the Sixth Mass Extinction... and that we humans are causing it?" Order="1"></QuestionText>
+					</QuestionTexts>
+					<Answers>
+					  <Answer Id="1" NextQuestionID="3" Text="Yes"></Answer>
+					  <Answer Id="2" NextQuestionID="2" Text="No"></Answer>
+					</Answers>
+				  </Question>
+				  <Question Id="2">
+					<QuestionTexts>
+					  <QuestionText Text="Now that you are, would you be willing to help in some way to stop it?" Order="1"></QuestionText>
+					</QuestionTexts>
+					<Answers>
+					  <Answer Id="1" Text="Yes"></Answer>
+					  <Answer Id="2" Text="No"></Answer>
+					  <Answer Id="3" Text="Maybe"></Answer>
+					</Answers>
+				  </Question>
+				  <Question Id="3">
+					<QuestionTexts>
+					  <QuestionText Text="Are you doing anything at this point to help stop it?" Order="1"></QuestionText>
+					</QuestionTexts>
+					<Answers>
+					  <Answer Id="1" Text="Yes"></Answer>
+					  <Answer Id="2" NextQuestionID="4" Text="No"></Answer>
+					</Answers>
+				  </Question>
+				  <Question Id="4">
+					<QuestionTexts>
+					  <QuestionText Text="Would you be willing to help if you thought you could?" Order="1"></QuestionText>
+					</QuestionTexts>
+					<Answers>
+					  <Answer Id="1" Text="Yes"></Answer>
+					  <Answer Id="2" Text="No"></Answer>
+					  <Answer Id="3" Text="Maybe"></Answer>
+					</Answers>
+				  </Question>
+				</Questions>
+			</ConversationalPoll>
+		</WebSlide>  
+  </WebSlides>
+</WebShowManifest>

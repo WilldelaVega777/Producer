@@ -1,0 +1,111 @@
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvSL2\WayvSL2ASPX\bin\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvSL2\WayvSL2ASPX\bin\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvSL2\WayvSL2ASPX\bin\System.Web.Silverlight.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvSL2\WayvSL2ASPX\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvSL2\WayvSL2ASPX\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvSL2\WayvSL2ASPX\obj\Debug\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvSL2\WayvSL2ASPX\obj\Debug\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvSL2\WayvSL2ASPX\bin\Assets\Images\Header\Earthwayv-Logo.png
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvSL2\WayvSL2ASPX\bin\Assets\Fonts\WayvFonts.zip
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvLite\WayvSL2ASPX\bin\Assets\Images\Header\Earthwayv-Logo.png
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvLite\WayvSL2ASPX\bin\Assets\Fonts\WayvFonts.zip
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvLite\WayvSL2ASPX\bin\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvLite\WayvSL2ASPX\bin\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvLite\WayvSL2ASPX\bin\System.Web.Silverlight.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvLite\WayvSL2ASPX\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvLite\WayvSL2ASPX\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvLite\WayvSL2ASPX\obj\Debug\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvLite\WayvSL2ASPX\obj\Debug\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\bin\Assets\Images\Header\Earthwayv-Logo.png
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\bin\Assets\Fonts\WayvFonts.zip
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\bin\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\bin\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\bin\System.Web.Silverlight.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\obj\Debug\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\obj\Debug\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\bin\de\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\bin\es\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\bin\fr\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\bin\it\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8\WayvAlpha8ASPX\bin\ko\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\bin\Assets\Images\Header\Earthwayv-Logo.png
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\bin\Assets\Fonts\WayvFonts.zip
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\bin\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\bin\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\bin\System.Web.Silverlight.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\bin\de\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\bin\es\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\bin\fr\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\bin\it\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\bin\ko\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\obj\Debug\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha8.1\WayvAlpha8ASPX\obj\Debug\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\Assets\Images\Header\Earthwayv-Logo.png
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\Assets\Fonts\WayvFonts.zip
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\System.Web.Silverlight.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\de\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\es\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\fr\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\it\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\ko\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\obj\Debug\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\obj\Debug\WayvSL2ASPX.pdb
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\Assets\Images\Header\Earthwayv-Logo.png
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\Assets\Fonts\WayvFonts.zip
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\WayvSL2ASPX.dll
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\WayvSL2ASPX.pdb
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\System.Web.Silverlight.dll
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\de\System.Web.Silverlight.resources.dll
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\es\System.Web.Silverlight.resources.dll
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\fr\System.Web.Silverlight.resources.dll
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\it\System.Web.Silverlight.resources.dll
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\ko\System.Web.Silverlight.resources.dll
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\obj\Debug\WayvSL2ASPX.dll
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\obj\Debug\WayvSL2ASPX.pdb
+C:\Users\Carl Carpenter\Documents\Visual Studio 2008\Projects\WayvAlpha9.1\WayvAlpha9ASPX\bin\Assets\Images\Header\OCR-Logo.png
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\Assets\Images\Header\OCR-Logo.png
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha9\WayvAlpha9ASPX\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\Assets\Images\OverLinks\Header\Earthwayv-Logo.png
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\Assets\Fonts\WayvFonts.zip
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\Assets\Images\OverLinks\Header\OCR-Logo.png
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\WayvSL2ASPX.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\WayvSL2ASPX.pdb
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\System.Web.Silverlight.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\de\System.Web.Silverlight.resources.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\es\System.Web.Silverlight.resources.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\fr\System.Web.Silverlight.resources.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\it\System.Web.Silverlight.resources.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\ko\System.Web.Silverlight.resources.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\obj\Debug\WayvSL2ASPX.dll
+C:\Users\Carl-PC\Documents\Visual Studio 2008\Projects\WayvAlpha10.1\WayvAlphaASPX\obj\Debug\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\Assets\Fonts\WayvFonts.zip
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\System.Web.Silverlight.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\de\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\es\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\fr\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\it\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\ko\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\obj\Debug\WayvSL2ASPX.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\obj\Debug\WayvSL2ASPX.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\WayvAlpha\WayvAlphaASPX\bin\Ionic.Zip.dll

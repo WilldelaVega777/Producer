@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas xmlns="http://schemas.microsoft.com/client/2007" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="1024" Height="576" Background="#00FFFFFF" x:Name="OWebSlide_0001">
+  <Canvas.Resources>
+    <Storyboard x:Name="OSBMain" FillBehavior="Stop">
+
+      <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="OMovingBackground" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+        <SplineDoubleKeyFrame KeyTime="00:00:01" Value="1" />
+      </DoubleAnimationUsingKeyFrames>
+
+      <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="OMovingBackground" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+
+        <SplineDoubleKeyFrame KeySpline="1,0,1,0.307" KeyTime="00:00:00.8000000" Value="1" />
+        <SplineDoubleKeyFrame KeyTime="00:00:26" Value="1.2279784679412842" />
+
+      </DoubleAnimationUsingKeyFrames>
+
+      <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="OMovingBackground" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+
+        <SplineDoubleKeyFrame KeySpline="1,0,1,0.307" KeyTime="00:00:00.8000000" Value="1" />
+        <SplineDoubleKeyFrame KeyTime="00:00:26" Value="1.2279784679412842" />
+
+      </DoubleAnimationUsingKeyFrames>
+
+      <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="OMovingBackground" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+
+        <SplineDoubleKeyFrame KeySpline="1,0,1,0.307" KeyTime="00:00:00.8000000" Value="0" />
+        <SplineDoubleKeyFrame KeyTime="00:00:26" Value="-19.781290054321289" />
+
+      </DoubleAnimationUsingKeyFrames>
+
+      <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="OMovingBackground" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+
+        <SplineDoubleKeyFrame KeySpline="1,0,1,0.307" KeyTime="00:00:00.8000000" Value="0" />
+        <SplineDoubleKeyFrame KeyTime="00:00:26" Value="65.556045532226562" />
+
+      </DoubleAnimationUsingKeyFrames>
+
+    </Storyboard>
+
+    <Storyboard x:Name="OSBFadeOut">
+
+      <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="OBackground" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+        <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0" />
+      </DoubleAnimationUsingKeyFrames>
+
+    </Storyboard>
+
+  </Canvas.Resources>
+  <Image x:Name="OBackground" />
+  <Image x:Name="OMovingBackground" RenderTransformOrigin="0.5,0.5" Width="1024" Height="576" Canvas.Top="0" Canvas.Left="0">
+    <Image.RenderTransform>
+      <TransformGroup>
+        <ScaleTransform ScaleX="1" ScaleY="1" />
+        <SkewTransform AngleX="0" AngleY="0" />
+        <RotateTransform Angle="0" />
+        <TranslateTransform X="0" Y="0" />
+      </TransformGroup>
+    </Image.RenderTransform>
+  </Image>
+</Canvas>

@@ -1,0 +1,80 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"                    
+>
+
+    <!-- ========================================================================================================== -->
+
+    <Style x:Key="CheckBoxFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border>
+                        <Rectangle Margin="15,0,0,0" Stroke="#60000000" StrokeThickness="1" StrokeDashArray="1 2" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ====================================================================================================================================== -->
+
+    <Style TargetType="{x:Type CheckBox}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="FocusVisualStyle" Value="{DynamicResource CheckBoxFocusVisual}" />
+        <Setter Property="Background" Value="{DynamicResource NormalBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <BulletDecorator Background="Transparent">
+                        <BulletDecorator.Bullet>
+                            <Grid Width="13" Height="13">
+                                <Border x:Name="Border" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="0,0,0,0" Background="{DynamicResource LightBrush}">
+                                    <Border.BorderBrush>
+                                        <SolidColorBrush Color="{DynamicResource BlackColor}" />
+                                    </Border.BorderBrush>
+                                    <Rectangle Visibility="Hidden" Fill="{DynamicResource GlyphBrush}" x:Name="rectangle" Margin="1,1,1,1" />
+                                </Border>
+                                <Path Stretch="Fill" Stroke="{DynamicResource GlyphBrush}" StrokeThickness="2" x:Name="path" Width="Auto" Data="M1.0924787,5.372821 L3.1785986,10.519821 10.528543,2.5198207" Margin="1.577,0.134,-0.013,2.866" />
+                            </Grid>
+                        </BulletDecorator.Bullet>
+                        <ContentPresenter RecognizesAccessKey="True" Margin="5,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+                    </BulletDecorator>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsThreeState" Value="True" />
+                                <Condition Property="IsChecked" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Visibility" TargetName="rectangle" Value="Visible" />
+                            <Setter Property="Visibility" TargetName="path" Value="Hidden" />
+                        </MultiTrigger>
+                        <Trigger Property="IsChecked" Value="false">
+                            <Setter Property="Stroke" TargetName="path" Value="{x:Null}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" TargetName="Border">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource WhiteColor}" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource DisabledBorderBrush}" TargetName="Border" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <SolidColorBrush Color="{DynamicResource WhiteColor}" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

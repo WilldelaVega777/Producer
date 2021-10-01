@@ -1,0 +1,115 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows.Media.Animation;
+
+namespace ProducerAlpha
+{
+    /// <summary>
+    /// Interaction logic for BottomBar.xaml
+    /// </summary>
+    public partial class BottomBar : UserControl
+    {
+        //---------------------------------------------------------------------------------
+        // Private Fields Section
+        //---------------------------------------------------------------------------------
+        private Boolean isHidden;
+        private Boolean isMoving;
+
+        //---------------------------------------------------------------------------------
+        // Private Fields Section
+        //---------------------------------------------------------------------------------
+        public BottomBar()
+        {
+            InitializeComponent();
+        }
+
+        //---------------------------------------------------------------------------------
+        // Event Handler Methods Section
+        //---------------------------------------------------------------------------------
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.isHidden = false;
+            this.isMoving = false;
+
+            this.DataContextChanged += new DependencyPropertyChangedEventHandler(BottomBar_DataContextChanged);
+
+        }
+
+        //---------------------------------------------------------------------------------
+        private void AutoHideHotspot_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if ((this.chkAutoHide.IsChecked == true) && (this.isHidden == true) && (this.isMoving == false))
+            {
+                this.isMoving = true;
+                (this.Resources["OSBAutoHide_Showing"] as Storyboard).Begin();
+            }
+        }
+
+        //---------------------------------------------------------------------------------
+        private void ExternalContainer_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if ((this.chkAutoHide.IsChecked == true) && (this.isHidden == false) && (this.isMoving == false))
+            {
+                this.isMoving = true;
+                (this.Resources["OSBAutoHide_Hidding"] as Storyboard).Begin();
+            }
+        }
+
+        //---------------------------------------------------------------------------------
+        private void OSBAutoHideHidding_Completed(object sender, EventArgs e)
+        {
+            this.isHidden = true;
+            this.isMoving = false;
+        }
+
+        //---------------------------------------------------------------------------------
+        private void OSBAutoHideShowing_Completed(object sender, EventArgs e)
+        {
+            this.isHidden = false;
+            this.isMoving = false;
+        }
+
+        //---------------------------------------------------------------------------------
+        private void BottomBar_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            this.WSFLPlaceHolder.DataContext = null;
+            this.OIdentityBar.DataContext = null;
+
+            this.WSFLPlaceHolder.DataContext = this.DataContext;
+            this.OIdentityBar.DataContext = this.DataContext;
+            
+        }
+
+        //---------------------------------------------------------------------------------
+        // Public Methods Section
+        //---------------------------------------------------------------------------------
+        public void SetVideo(Uri pVideoUri)
+        {
+            this.OVideoPlayer.VideoUri = pVideoUri;
+        }
+
+        //---------------------------------------------------------------------------------
+        public void PlayVideo()
+        {
+            this.OVideoPlayer.Play();
+        }
+
+        //---------------------------------------------------------------------------------
+        public void SetVideoMute(Boolean bMute)
+        {
+            this.OVideoPlayer.SetVideoMute(bMute);
+        }
+
+    }
+}

@@ -1,0 +1,134 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
+using System.Xml.Serialization;
+using System.Xml.Serialization;
+
+
+
+namespace ProducerAlpha
+{
+    class WayvFS
+    {
+        //-------------------------------------------------------------------------------------------
+        // Private Fields Section
+        //-------------------------------------------------------------------------------------------
+
+        //-------------------------------------------------------------------------------------------
+        // Public Properties Section
+        //-------------------------------------------------------------------------------------------
+
+
+        //-------------------------------------------------------------------------------------------
+        // Constructor Method Section
+        //-------------------------------------------------------------------------------------------
+
+
+        //-------------------------------------------------------------------------------------------
+        // Singleton Pattern Section
+        //-------------------------------------------------------------------------------------------
+
+
+        //-------------------------------------------------------------------------------------------
+        // Public Static Methods Section
+        //-------------------------------------------------------------------------------------------
+        public static bool CheckIfProjectExists(string sPath)
+        {
+            bool bRetVal = false;
+
+            if (Directory.Exists(Path.GetDirectoryName(sPath)))
+            {
+                bRetVal = true;
+            }
+
+            return bRetVal;
+        }
+        
+        //-------------------------------------------------------------------------------------------
+        public static void CreateEmptyProject(string sPath)
+        {
+            if (!Directory.Exists(Path.GetDirectoryName(sPath)))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(sPath));
+                Directory.CreateDirectory(Path.GetDirectoryName(sPath) + @"\" + "Resources");
+            }
+
+            if (!File.Exists(sPath))
+            {
+                File.Create(sPath);
+            }
+
+        }
+
+        //-------------------------------------------------------------------------------------------
+        public static void SaveShow(Show pShow)
+        {
+            XmlSerializer xml = new XmlSerializer(typeof(Show));
+            using (Stream stream = new FileStream(pShow.FullyQualifiedFileName,
+                   FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                xml.Serialize(stream, pShow);
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        public static void CreateFrame(string sPath, int pNumber)
+        {
+            if (!Directory.Exists(Path.GetDirectoryName(sPath)))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(sPath) + @"\" + "Frames" + @"\" + pNumber.ToString().PadLeft(4,'0'));
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        public static void DeleteFrame(string sPath, int pNumber)
+        {
+            if (!Directory.Exists(Path.GetDirectoryName(sPath) + @"\" + "Frames" + @"\" + pNumber.ToString().PadLeft(4, '0')))
+            {
+                Directory.Delete(Path.GetDirectoryName(sPath) + @"\" + "Frames" + @"\" + pNumber.ToString().PadLeft(4, '0'), true);
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        public static void ReorderFrame(string sPath, int pNumberSource, int pNumberTarget)
+        {
+            if (!Directory.Exists(Path.GetDirectoryName(sPath) + @"\" + "Frames" + @"\" + pNumberSource.ToString().PadLeft(4, '0')))
+            {
+
+
+
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        public static void AddResourceToFrame(string sPath, string pSourcePath, int pFrameNumber, string pResourceName)
+        {
+            if (!Directory.Exists(Path.GetDirectoryName(sPath) + @"\" + "Frames" + @"\" + pFrameNumber.ToString().PadLeft(4, '0')))
+            {
+                if (File.Exists(Path.GetDirectoryName(pSourcePath) +
+                                    @"\" +
+                                    "Frames" +
+                                    @"\" +
+                                    pFrameNumber.ToString().PadLeft(4, '0') +
+                                    @"\" + pResourceName)
+                    )
+                {
+
+                }
+
+
+            }
+            else
+            {
+                throw new ProducerAlphaException("Resource already exists, please delete it first");
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        // Private Methods Section
+        //-------------------------------------------------------------------------------------------
+
+    }
+}

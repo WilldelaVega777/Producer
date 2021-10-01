@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<WebShowManifest xsi:noNamespaceSchemaLocation="..\..\Specs\WebShowSpec.xsd" WebShowName="Project270" WebShowAuthor="Carl Carpenter" WebShowDate="3/26/2009 3:41:02 PM" WebShowVersion="3" InitialVideoWindowX="760" InitialVideoWindowY="17" InitialVideoWindowHeight="160" InitialVideoWindowWidth="140" InitialVideoWindowSource="/WebShows/0000000000/Resources/WebShowVideo.wmv" BasePath="/WebShows/0000000000/" BottomBarDefaultColor="#aa000000" BottomBarDefaultOpacity="0.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebSlides>
+    <WebSlide>
+      <Thumbnail FrameID="1" ImageSource="/WebShows/0000000000/Resources/Thumbnails/Default.jpg" FrameText="New Webslide" />
+      <Assets>
+        <Asset ID="OMovingBackground" Value="WebSlideBackground_1.jpg" />
+      </Assets>
+    </WebSlide>
+    <WebSlide>
+      <Thumbnail FrameID="2" ImageSource="/WebShows/0000000000/Resources/Thumbnails/Default.jpg" FrameText="New Webslide" />
+      <Assets>
+        <Asset ID="OMovingBackground" Value="WebSlideBackground_2.jpg" />
+      </Assets>
+    </WebSlide>
+    <WebSlide>
+      <Thumbnail FrameID="3" ImageSource="/WebShows/0000000000/Resources/Thumbnails/Default.jpg" FrameText="New VideoFrame" />
+      <Assets>
+        <Asset ID="OMovingBackground" Value="WebSlideBackground_3.jpg" />
+      </Assets>
+    </WebSlide>
+    <WebSlide>
+      <Thumbnail FrameID="4" ImageSource="/WebShows/0000000000/Resources/Thumbnails/Default.jpg" FrameText="New Webslide" />
+      <Assets>
+        <Asset ID="OMovingBackground" Value="WebSlideBackground_4.jpg" />
+      </Assets>
+    </WebSlide>
+    <WebSlide>
+      <Thumbnail FrameID="5" ImageSource="/WebShows/0000000000/Resources/Thumbnails/Default.jpg" FrameText="New Webslide" />
+      <Assets>
+        <Asset ID="OMovingBackground" Value="WebSlideBackground_5.jpg" />
+      </Assets>
+    </WebSlide>
+  </WebSlides>
+</WebShowManifest>

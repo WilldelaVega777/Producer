@@ -1,0 +1,164 @@
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\Temporal Tests\Webslide1.jpg
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\ProducerAlpha.exe.config
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\ProducerAlpha.exe.manifest
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\ProducerAlpha.application
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\ProducerAlpha.exe
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\ProducerAlpha.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\Mindscape.WpfPropertyGrid.Design.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\Mindscape.WpfPropertyGrid.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\TimelineController.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\TimelineController.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\Mindscape.WpfPropertyGrid.xml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\CircularProgressBar\CircularProgressBar.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\ErrorReporter\ErrorReporter.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\IdentityBar\IdentityBar.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\Welcome\Welcome.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Button.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\CheckBox.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ComboBox.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ContextMenu.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Custom.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Custom\DropdownButton.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Expander.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\GridSplitter.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\GroupBox.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Label.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ListBox.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ListView.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Menu.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\PasswordBox.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ProgressBar.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\RadioButton.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\RichTextBox.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ScrollBar.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Slider.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\StatusBar.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\TabControl.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\TextBlock.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\TextBox.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ToggleButton.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarButton.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarCheckBox.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarComboBox.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarRadioButton.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarTextBox.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarToggleButton.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ToolTip.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\TreeView.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\ExpressiveControls.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\ExpressiveResources.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Resources\Brushes.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Resources\GeneralStyles.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Startup.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Temporal Tests\Temp.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\App.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\BottomBar\BottomBar.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\CircularProgressBar\CircularProgressBar.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\ErrorReporter\ErrorReporter.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\IdentityBar\IdentityBar.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\NewDialog\NewDialog.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\VideoPlayer\VideoPlayer.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\WaitForPublishDialog\WaitForPublishDialog.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\Welcome\Welcome.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\frmMain.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Startup.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Temporal Tests\Temp.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\App.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha_Content.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha_MarkupCompile.cache
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha_MarkupCompile.lref
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\BottomBar\BottomBar.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\NewDialog\NewDialog.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\VideoPlayer\VideoPlayer.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\WaitForPublishDialog\WaitForPublishDialog.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\DataTemplates\ScriptPanelDataTemplate.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\frmMain.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Custom\ThreeStateToggleButton.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha.g.resources
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha.Properties.Resources.resources
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha.csproj.GenerateResource.Cache
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha.exe.licenses
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha.exe.manifest
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha.application
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha.exe
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha.pdb
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\WebChannelSelector\WebChannelSelector.baml
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Components\WebChannelSelector\WebChannelSelector.g.cs
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\policy.2.0.taglib-sharp.config
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\Interop.WMPDXMLib.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\bin\Debug\Interop.WMPLib.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Interop.WMPDXMLib.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\Interop.WMPLib.dll
+C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\obj\Debug\ProducerAlpha.csproj.ResolveComReference.cache
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\ProducerAlpha.csprojAssemblyReference.cache
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Interop.WMPDXMLib.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Interop.WMPLib.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\ProducerAlpha.csproj.ResolveComReference.cache
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\CircularProgressBar\CircularProgressBar.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\ErrorReporter\ErrorReporter.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\IdentityBar\IdentityBar.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\Welcome\Welcome.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Button.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\CheckBox.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ComboBox.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ContextMenu.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Custom.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Custom\DropdownButton.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Expander.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\GridSplitter.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\GroupBox.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Label.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ListBox.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ListView.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Menu.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\PasswordBox.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ProgressBar.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\RadioButton.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\RichTextBox.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ScrollBar.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Slider.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\StatusBar.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\TabControl.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\TextBlock.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\TextBox.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ToggleButton.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarButton.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarCheckBox.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarComboBox.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarRadioButton.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarTextBox.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\Toolbar\ToolbarToggleButton.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\ToolTip.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Controls\TreeView.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\ExpressiveControls.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\ExpressiveResources.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Resources\Brushes.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Skins\Expressive\Resources\GeneralStyles.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Startup.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Temporal Tests\Temp.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\App.baml
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\BottomBar\BottomBar.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\CircularProgressBar\CircularProgressBar.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\ErrorReporter\ErrorReporter.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\IdentityBar\IdentityBar.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\NewDialog\NewDialog.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\VideoPlayer\VideoPlayer.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\WaitForPublishDialog\WaitForPublishDialog.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\WebChannelSelector\WebChannelSelector.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Components\Welcome\Welcome.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\frmMain.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Startup.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\Temporal Tests\Temp.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\App.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\ProducerAlpha_Content.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\ProducerAlpha_MarkupCompile.cache
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\ProducerAlpha_MarkupCompile.lref
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\ProducerAlpha.exe
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\ProducerAlpha.pdb

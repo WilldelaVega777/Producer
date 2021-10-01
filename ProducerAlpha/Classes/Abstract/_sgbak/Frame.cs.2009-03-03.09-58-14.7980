@@ -1,0 +1,181 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Collections.ObjectModel;
+using System.Windows;
+using System.ComponentModel;
+using System.Xml.Serialization;
+
+namespace ProducerAlpha
+{
+    [Serializable]
+    public abstract class Frame : DependencyObject, INotifyPropertyChanged
+    {
+        //----------------------------------------------------------------------------------------------------------
+        // Private Fields Section
+        //----------------------------------------------------------------------------------------------------------
+        private int     id;
+        private string  title;
+        private int     sortOrder;
+        private string  thumbnailPath;
+        private Script  script;
+
+        //----------------------------------------------------------------------------------------------------------
+        // Public Properties Section
+        //----------------------------------------------------------------------------------------------------------
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+            set
+            {
+                this.id = value;
+                this.Script.Id = value;
+            }
+        }
+
+        //----------------------------------------------------------------------------------------------------------
+        public string Title
+        {
+            get
+            {
+                return this.title;
+            }
+            set
+            {
+                this.title = value;
+                this.OnPropertyChanged("Title");
+            }
+        }
+
+        //----------------------------------------------------------------------------------------------------------
+        public int SortOrder
+        {
+            get
+            {
+                return this.sortOrder;
+            }
+            set
+            {
+                this.sortOrder = value;
+                this.OnPropertyChanged("SortOrder");
+            }
+        }
+
+        //----------------------------------------------------------------------------------------------------------
+        public string ThumbnailPath
+        {
+            get
+            {
+                return this.thumbnailPath;
+            }
+            set
+            {
+                this.thumbnailPath = value;
+                this.OnPropertyChanged("ThumbnailPath");
+            }
+        }
+
+        //----------------------------------------------------------------------------------------------------------
+        public ProducerAlpha.Script Script
+        {
+            get
+            {
+                return this.script;
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------------------
+        // Dependency Properties
+        //-------------------------------------------------------------------------------------------------------
+        public bool RenderPreview
+        {
+
+            get { return (bool)GetValue(RenderPreviewProperty); }
+
+            set 
+            { 
+                SetValue(RenderPreviewProperty, value);
+                this.OnPropertyChanged("RenderPreview");
+            }
+
+        }
+        public static readonly DependencyProperty RenderPreviewProperty =
+            DependencyProperty.Register("RenderPreview",
+                typeof(bool),
+                typeof(Frame),
+                new FrameworkPropertyMetadata()
+            );
+
+        //----------------------------------------------------------------------------------------------------------
+        public bool LockFrame
+        {
+
+            get { return (bool)GetValue(LockFrameProperty); }
+
+            set 
+            { 
+                SetValue(LockFrameProperty, value);
+                this.OnPropertyChanged("LockFrame");
+            }
+
+        }
+        public static readonly DependencyProperty LockFrameProperty =
+            DependencyProperty.Register("LockFrame",
+                typeof(bool),
+                typeof(Frame),
+                new FrameworkPropertyMetadata()
+            );
+
+        //----------------------------------------------------------------------------------------------------------
+        // Constructors Method Section
+        //----------------------------------------------------------------------------------------------------------
+        public Frame()
+        {
+            this.RenderPreview = true;
+        }
+
+        //----------------------------------------------------------------------------------------------------------
+        public Frame(Script pScript)
+        {
+            this.script = pScript;
+            (this.script as INotifyPropertyChanged).PropertyChanged += new PropertyChangedEventHandler(Frame_PropertyChanged);
+
+            this.id = pScript.Id;
+            this.RenderPreview = true;
+        }
+
+        //----------------------------------------------------------------------------------------------------------
+        // Event Handler Methods Section
+        //----------------------------------------------------------------------------------------------------------
+        void Frame_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.OnPropertyChanged("Script");
+        }
+
+
+        //----------------------------------------------------------------------------------------------------------
+        // INotifyPropertyChanged Implementation Section
+        //----------------------------------------------------------------------------------------------------------
+        private PropertyChangedEventHandler propertyChanged;
+
+        //-------------------------------------------------------------------------------------------------
+        event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+        {
+            add { this.propertyChanged += value; }
+            remove { this.propertyChanged -= value; }
+        }
+
+        //-------------------------------------------------------------------------------------------------
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (this.propertyChanged != null)
+            {
+                this.propertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+}

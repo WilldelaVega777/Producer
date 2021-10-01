@@ -1,0 +1,1084 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ms="http://namespaces.mindscape.co.nz/wpf"    
+	xmlns:ProducerAlpha="clr-namespace:ProducerAlpha"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:m="clr-namespace:Wpf.Controls;assembly=Wpf.SplitButton"
+    xmlns:tlc="clr-namespace:TimelineController.Components;assembly=TimelineController"
+    mc:Ignorable="d" 
+    x:Class="ProducerAlpha.frmMain"
+	x:Name="Window"
+	Width="1281" 
+    Height="768" 
+    HorizontalContentAlignment="Stretch" 
+    VerticalContentAlignment="Stretch" 
+    MinWidth="1024" 
+    Background="{DynamicResource BackgroundBrush}"
+    MinHeight="640"
+    Icon="/Assets/Icons/WayvIcon.png"
+    WindowState="Maximized"
+    SnapsToDevicePixels="True"
+    LayoutUpdated="Window_LayoutUpdated"
+    Loaded="Window_Loaded"
+    SizeChanged="Window_SizeChanged"
+    Closing="Window_Closing"
+    Title="Wayv Producer - Alpha v.1.1"
+    >
+
+    <!-- Window Resources -->
+    <Window.Resources>
+        <ResourceDictionary>            
+            <ResourceDictionary.MergedDictionaries>
+                <ms:Alloy/>
+            </ResourceDictionary.MergedDictionaries>
+            <ProducerAlpha:FormattingConverter x:Key="FormattingConverter"/>
+            <ms:RowToDescriptionConverter x:Key="RowToDescription" />
+            <ProducerAlpha:ToStringEnumerationTagConverter x:Key="ToStringEnumerationTagConverter"/>
+            <ProducerAlpha:ToStringEnumerationProducerConverter x:Key="ToStringEnumerationProducerConverter"/>
+            <ProducerAlpha:ToStringEnumerationDirectorConverter x:Key="ToStringEnumerationDirectorConverter"/>
+            <ProducerAlpha:ToStringEnumerationDesignerConverter x:Key="ToStringEnumerationDesignerConverter"/>
+            <ProducerAlpha:ToStringEnumerationSpeakerConverter x:Key="ToStringEnumerationSpeakerConverter"/>
+            <ProducerAlpha:ToStringEnumerationComposerConverter x:Key="ToStringEnumerationComposerConverter"/>
+            <ProducerAlpha:ToStringEnumerationDeveloperConverter x:Key="ToStringEnumerationDeveloperConverter"/>
+            <ProducerAlpha:IAcceptsControlsToBooleanConverter x:Key="IAcceptsControlsToBooleanConverter"/>
+            <ProducerAlpha:IAcceptsBackgroundImageToBooleanConverter x:Key="IAcceptsBackgroundImageToBooleanConverter"/>
+            <ProducerAlpha:FrameToSourceConverter x:Key="FrameToSourceConverter"/>
+            <ProducerAlpha:HasXamlLoadedToBooleanConverter x:Key="HasXamlLoadedToBooleanConverter"/>
+            <ProducerAlpha:RowBackgroundConverter x:Key="RowBackgroundConverter"/>
+            <ProducerAlpha:DetectXamlImportStatusImageConverter x:Key="DetectXamlImportStatusImageConverter"/>
+            <ProducerAlpha:DetectXamlImportStatusTextConverter x:Key="DetectXamlImportStatusTextConverter"/>            
+            <ProducerAlpha:XamlLinkRemoveXamlButtonVisibilityConverter x:Key="XamlLinkRemoveXamlButtonVisibilityConverter"/>
+            <ProducerAlpha:XamlLinkCreateLinkButtonVisibilityConverter x:Key="XamlLinkCreateLinkButtonVisibilityConverter"/>
+            <ProducerAlpha:XamlLinkUpdateLinkButtonVisibilityConverter x:Key="XamlLinkUpdateLinkButtonVisibilityConverter"/>
+            <ProducerAlpha:XamlLinkRemoveLinkButtonVisibilityConverter x:Key="XamlLinkRemoveLinkButtonVisibilityConverter"/>
+            <ProducerAlpha:IAcceptsControlsToBooleanForXamlImportConverter  x:Key="IAcceptsControlsToBooleanForXamlImportConverter"/>
+            <ProducerAlpha:AssetTypeToStringConverter  x:Key="AssetTypeToStringConverter"/>            
+        </ResourceDictionary>
+        
+    </Window.Resources>
+    
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New"                   CanExecute="CommandCanExecute" Executed="CommandExecuted"/>
+        <CommandBinding Command="ApplicationCommands.Open"                  CanExecute="CommandCanExecute" Executed="CommandExecuted"/>
+        <CommandBinding Command="ApplicationCommands.Save"                  CanExecute="CommandCanExecute" Executed="CommandExecuted"/>
+        <CommandBinding Command="ApplicationCommands.Close"                 CanExecute="CommandCanExecute" Executed="CommandExecuted"/>
+        <CommandBinding Command="ProducerAlpha:frmMain.ImportCommand"       CanExecute="CommandCanExecute" Executed="CommandExecuted"/>
+        <CommandBinding Command="ProducerAlpha:frmMain.ExportCommand"       CanExecute="CommandCanExecute" Executed="CommandExecuted"/>
+        <CommandBinding Command="ProducerAlpha:frmMain.PreviewCommand"      CanExecute="CommandCanExecute" Executed="CommandExecuted"/>        
+        <CommandBinding Command="ProducerAlpha:frmMain.PublishCommand"      CanExecute="CommandCanExecute" Executed="CommandExecuted"/>
+        <CommandBinding Command="ProducerAlpha:frmMain.HelpContentsCommand" CanExecute="CommandCanExecute" Executed="CommandExecuted"/>
+        <CommandBinding Command="ProducerAlpha:frmMain.AboutCommand"        CanExecute="CommandCanExecute" Executed="CommandExecuted"/>
+
+        <CommandBinding Command="ProducerAlpha:frmMain.SaveConsole"         CanExecute="CommandCanExecute" Executed="CommandExecuted"/>
+        <CommandBinding Command="ProducerAlpha:frmMain.ClearConsole"        CanExecute="CommandCanExecute" Executed="CommandExecuted"/>
+    </Window.CommandBindings>
+    
+    <!-- UI Definition Section -->
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Main Menu Section -->
+        <Menu Visibility="Visible" Grid.Row="0" HorizontalAlignment="Stretch" Margin="0,1,0,0" Width="Auto" Height="Auto">
+            
+            <MenuItem Header="_Project" Style="{DynamicResource ExpressiveMenuItem}">
+                <MenuItem Command="ApplicationCommands.New"/>
+                <MenuItem Command="ApplicationCommands.Open" x:Name="OpenMenu"/>
+                <MenuItem Command="ApplicationCommands.Save"/>
+                <Separator/>
+                <MenuItem Command="ProducerAlpha:frmMain.ImportCommand" InputGestureText="Ctrl+I"/>
+                <MenuItem Command="ProducerAlpha:frmMain.ExportCommand" InputGestureText="Ctrl+E"/>
+                <Separator/>
+                <MenuItem Command="ProducerAlpha:frmMain.PreviewCommand" InputGestureText="Ctrl+R"/>
+                <MenuItem Command="ProducerAlpha:frmMain.PublishCommand" InputGestureText="Ctrl+H"/>
+                <Separator/>
+                <MenuItem  Command="ApplicationCommands.Close" InputGestureText="Ctrl+X"/>
+            </MenuItem>
+
+            <MenuItem Header="_Help" Style="{DynamicResource ExpressiveMenuItem}">
+                <MenuItem Command="ProducerAlpha:frmMain.HelpContentsCommand" InputGestureText="Ctrl+H"/>
+                <Separator/>
+                <MenuItem Command="ProducerAlpha:frmMain.AboutCommand"/>
+            </MenuItem>
+            
+        </Menu>
+
+        <!-- Main Application UI Section -->
+        <DockPanel x:Name="PaneContainer" LastChildFill="True" Grid.Row="1" Margin="0,0,0,0">
+
+            <!-- Side Bar -->
+            <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Left" Width="Auto" Height="Auto" VerticalAlignment="Stretch" x:Name="LeftPane" Margin="0,1,0,0">
+                <TabControl x:Name="tabctrlSidePane" IsSynchronizedWithCurrentItem="True" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" >
+                    <TabItem x:Name="ScriptTab" Width="193">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="18" Width="86" HorizontalAlignment="Left">
+                                <TextBlock Text="{DynamicResource TabItemScript}" Margin="3,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </TabItem.Header>
+
+                        <Grid Height="600" Width="390" x:Name="MainScriptPane" Margin="-2,0,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="ScriptPaneDivider" Height="Auto" MinHeight="29" MaxHeight="300"/>
+                                <RowDefinition Height="*" MinHeight="29"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Expander x:Name="ScriptPane" Collapsed="ScriptPane_Collapsed" Expanded="ScriptPane_Expanded" Height="Auto" Header="{DynamicResource HeaderExpanderFrames}" Grid.Row="0" Margin="4,0,4,4" VerticalAlignment="Stretch" IsExpanded="True" SizeChanged="ScriptPane_SizeChanged">
+                                <Grid x:Name="ScriptEditorBody" Margin="4,4,4,4">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="32"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Border Grid.RowSpan="2" CornerRadius="3,3,3,3" Background="#99222222" Margin="0,0,0,2"/>
+
+                                    <StackPanel x:Name="ScriptEditorMainPanelControls" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,6,-17,0">
+
+                                        <m:SplitButton ToolTip="{DynamicResource ToolTipNewFrame}" x:Name="cmdAddFrame" Placement="Bottom" Height="23.823" FontSize="14" VerticalAlignment="Top" Style="{DynamicResource SplitButtonStyle}" Click="cmdAddFrame_Click" Margin="0,0,5,0">
+                                            <MenuItem Header="{DynamicResource WebSlide}" x:Name="mnuAddWebSlide" Style="{DynamicResource ContextMenuStyle}" Click="mnuAddWebSlide_Click" IsChecked="True"/>
+                                            <MenuItem Header="{DynamicResource VideoFrame}" x:Name="mnuAddVideoFrame" Style="{DynamicResource ContextMenuStyle}" Click="mnuAddVideoFrame_Click"/>
+                                            <MenuItem Header="{DynamicResource ConversationalPoll}" x:Name="mnuAddConversationalPoll" Style="{DynamicResource ContextMenuStyle}" Click="mnuAddConversationalPoll_Click"/>
+                                            <MenuItem Header="{DynamicResource PageShot}" x:Name="mnuAddPageShot" Style="{DynamicResource ContextMenuStyle}" Click="mnuAddPageShot_Click"/>
+                                            <MenuItem Header="{DynamicResource PageFrame}" x:Name="mnuAddPageFrame" Style="{DynamicResource ContextMenuStyle}" Click="mnuAddPageFrame_Click"/>
+                                        </m:SplitButton>
+
+                                        <Button ToolTip="{DynamicResource ToolTipDelete}" HorizontalAlignment="Right" Height="23.823" Width="24" FontSize="14" x:Name="cmdDeleteFrame" VerticalAlignment="Top" Click="cmdRemoveScriptItem_Click" Margin="0,0,5,0">
+                                            <Canvas x:Name="Minus" Width="16" Height="15.9643" Margin="2,9.5,2,4">
+                                                <Rectangle x:Name="MinusRect" Width="17" Height="7" Canvas.Left="0" Fill="{DynamicResource SolidBorderBrush}" Stroke="#FF000000"/>
+                                                <Canvas.RenderTransform>
+                                                    <ScaleTransform ScaleX="0.70" ScaleY="0.70"/>
+                                                </Canvas.RenderTransform>
+                                            </Canvas>
+                                        </Button>
+
+                                        <Button x:Name="cmdMoveUp" ToolTip="{DynamicResource ToolTipMoveUp}" HorizontalAlignment="Right" Width="24" Height="23.823" FontSize="14" VerticalAlignment="Top" Margin="0,0,5,0" Click="cmdMoveUp_Click">
+                                            <Canvas Width="14" Height="14" Canvas.Left="0" Canvas.Top="0">
+                                                <Path Width="15" Height="15" Canvas.Left="-8.9407e-008" Canvas.Top="9.53674e-007" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="{DynamicResource SolidBorderBrush}" Data="F1 M 4.98438,8.5L 0.5,8.5L 7.5,0.500001L 14.5,8.5L 9.5,8.5L 12.5156,14.5L 2.5,14.5L 4.98438,8.5 Z "/>
+                                            </Canvas>
+                                        </Button>
+
+                                        <Button x:Name="cmdMoveDown" ToolTip="{DynamicResource ToolTipMoveDown}" HorizontalAlignment="Right" Width="24" Height="23.823" FontSize="14" VerticalAlignment="Top" Margin="0,0,5,0" Click="cmdMoveDown_Click">
+                                            <Canvas Width="16" Height="16" Canvas.Left="0" Canvas.Top="0">
+                                                <Path Width="15" Height="15.0116" Canvas.Left="0.494532" Canvas.Top="2" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="{DynamicResource SolidBorderBrush}" Data="F1 M 10.5101,7.00585L 14.9945,7.01627L 7.97592,15L 0.994532,6.98373L 5.99452,6.99535L 2.99285,0.988361L 13.0084,1.01164L 10.5101,7.00585 Z "/>
+                                            </Canvas>
+                                        </Button>
+
+                                        <ToggleButton x:Name="cmdToggleExapandMode" IsChecked="{Binding Path=IsToggleModeActive, Mode=TwoWay}" ToolTip="{DynamicResource ToolTipToggleExpandMode}" HorizontalAlignment="Right" Width="24" Height="23.823" FontSize="14" VerticalAlignment="Top" Margin="0,0,5,0" Style="{DynamicResource ScriptPaneToggleButton}" Checked="cmdToggleExapandMode_Checked" Unchecked="cmdToggleExapandMode_Unchecked">
+                                            <Canvas Width="16" Height="15" Canvas.Left="0" Canvas.Top="1">
+                                                <Rectangle x:Name="Rectangle" Width="13" Height="3.51563" Canvas.Left="1.24219" Canvas.Top="0.75" Stretch="Fill" StrokeThickness="0.5" StrokeLineJoin="Round" Stroke="#FF252525" Fill="#FF7F7C7C"/>
+                                                <Rectangle x:Name="Rectangle_0" Width="13" Height="2.5" Canvas.Left="1.24219" Canvas.Top="12.75" Stretch="Fill" StrokeThickness="0.5" StrokeLineJoin="Round" Stroke="#FF2C2C2C" Fill="#FFD7D7D7"/>
+                                                <Path Width="13" Height="6.5" Canvas.Left="1.24219" Canvas.Top="5.26562" Stretch="Fill" StrokeThickness="0.5" StrokeLineJoin="Round" Stroke="#FF2C2C2C" Fill="#FFA2A2A2" Data="F1 M 13.9922,5.51562L 13.9922,11.5156L 1.49219,11.5156L 1.49219,5.51562L 13.9922,5.51562 Z "/>
+                                            </Canvas>
+                                        </ToggleButton>
+
+                                        <Button ToolTip="{DynamicResource ToolTipCollapse}" HorizontalAlignment="Right" Width="24" Height="23.823" FontSize="14" x:Name="cmdCollapse" VerticalAlignment="Top" Click="cmdCollapseItems_Click" Margin="0,0,5,0">
+                                            <Canvas Width="15.9375" Height="15.8333" Margin="0,3.5,2,4">
+                                                <Path Width="10.2422" Height="10" Canvas.Left="5.01563" Canvas.Top="6" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF2C2C2C" Fill="{DynamicResource SolidBorderBrush}" Data="F1 M 9.19613,9.2648L 6.64844,6.5L 14.7578,6.71875L 14.2578,15.1875L 11.9368,12.8018L 8.26345,15.5L 5.51563,11.9071L 9.19613,9.2648 Z "/>
+                                                <Path Width="9.54088" Height="10.012" Canvas.Left="0.492187" Canvas.Top="0.00362682" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF2C2C2C" Fill="{DynamicResource SolidBorderBrush}" Data="F1 M 6.16557,6.56443L 8.47656,9.51563L 0.992187,8.73438L 1.27344,0.765625L 3.67332,3.1178L 7.03443,0.503627L 9.53306,4.00465L 6.16557,6.56443 Z "/>
+                                            </Canvas>
+                                        </Button>
+
+                                        <Button ToolTip="{DynamicResource ToolTipExpand}" HorizontalAlignment="Right" Width="24" Height="23.823" FontSize="14" x:Name="cmdExpand" VerticalAlignment="Top" Click="cmdExpandItems_Click" Margin="0,0,5,0">
+                                            <Canvas Width="16" Height="16" Margin="0,3.5,2,4">
+                                                <Path Width="10.2422" Height="10" Canvas.Left="6.01562" Canvas.Top="6" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF2C2C2C" Fill="{DynamicResource SolidBorderBrush}" Data="F1 M 12.0773,12.7352L 14.625,15.5L 6.51562,15.2813L 7.01562,6.8125L 9.33666,9.19819L 13.01,6.5L 15.7578,10.0929L 12.0773,12.7352 Z "/>
+                                                <Path Width="9.54088" Height="10.012" Canvas.Left="0.500016" Canvas.Top="-0.0106306" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF2C2C2C" Fill="{DynamicResource SolidBorderBrush}" Data="F1 M 4.36752,3.44056L 2.05652,0.489369L 9.54089,1.27062L 9.25964,9.23937L 6.85976,6.88719L 3.49866,9.50137L 1.00002,6.00034L 4.36752,3.44056 Z "/>
+                                            </Canvas>
+                                        </Button>
+
+                                        <Button ToolTip="{DynamicResource ToolTipExportToTeleprompt}" HorizontalAlignment="Right" Width="24" Height="23.823" FontSize="14" x:Name="cmdExport" VerticalAlignment="Top" Margin="0,0,0,0">
+                                            <Canvas Width="16" Height="16" Canvas.Left="0" Canvas.Top="0" Margin="-0.5,3.5,5,5">
+                                                <Viewbox x:Name="Group" Width="12.5141" Height="16.584" Canvas.Left="2.67813" Canvas.Top="-0.304043">
+                                                    <Canvas Width="12.5141" Height="16.584">
+                                                        <Path Width="9.32047" Height="16.584" Canvas.Left="3.1936" Canvas.Top="0" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF2C2C2C" Fill="{DynamicResource SolidBorderBrush}" Data="F1 M 4.1936,15.584L 11.5141,8.28486L 4.20784,1"/>
+                                                        <Ellipse x:Name="Ellipse" Width="5.47509" Height="5.43236" Canvas.Left="-4.76837e-007" Canvas.Top="5.6755" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF2C2C2C" Fill="{DynamicResource SolidBorderBrush}"/>
+                                                    </Canvas>
+                                                </Viewbox>
+                                            </Canvas>
+                                        </Button>
+                                        <StackPanel.RenderTransform>
+                                            <ScaleTransform ScaleX="0.85" ScaleY="0.85" />
+                                        </StackPanel.RenderTransform>
+                                    </StackPanel>
+
+                                    <!-- Script Items Collection -->
+                                    <ListBox x:Name="ScriptListBox" Margin="0,0,1,4" ScrollViewer.CanContentScroll="False" IsSynchronizedWithCurrentItem="True" Grid.Row="1" ItemsSource="{Binding Path=Frames, Mode=TwoWay}" ItemTemplate="{DynamicResource ScriptEntriesTemplate}" ScrollViewer.VerticalScrollBarVisibility="Visible" GotFocus="ScriptListBox_GotFocus" Button.Click="ScriptListBox_ButtonClick" Expander.Expanded="ScriptListBox_Expanded" Expander.Collapsed="ScriptListBox_Collapsed" LostFocus="ScriptListBox_LostFocus" SelectionChanged="ScriptListBox_SelectionChanged"/>
+                                    
+                                </Grid>
+                            </Expander>
+
+                            <GridSplitter x:Name="OScriptPaneSplitter"
+                                          Grid.Row="0" 
+                                          ResizeDirection="Rows"
+                                          HorizontalAlignment="Stretch"
+					                      Height="4"
+                                          VerticalAlignment="Bottom"
+				            />
+
+                            <Expander x:Name="PropertiesPane" Collapsed="PropertiesPane_Collapsed" Expanded="PropertiesPane_Expanded" MinHeight="27" Header="{DynamicResource HeaderExpanderProperties}" Grid.Row="1" Margin="4,0,4,4" Height="Auto" VerticalAlignment="Stretch" IsExpanded="True">
+                                <Grid x:Name="PropertiesPaneGrid" Background="{DynamicResource ExpanderHeaderColorBrush}">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition  MinHeight="0" Height="48"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Border MinHeight="0" Grid.RowSpan="1" CornerRadius="3,3,3,3" Background="#ba222222" Margin="4,4,4,5"/>
+                                    <ms:PropertyGrid Name="OPropertyGrid" MinHeight="0" Grid.Row="0" Grid.Column="0" Margin="6,5,5,8" Style="{DynamicResource {x:Static ms:Alloy.StyleKey}}" AllowModifyCollections="False" Grouping='{x:Static ms:PropertyGrouping.ByCategory}'/>
+                                    <TextBox x:Name="txtPropertyDescription" Height="Auto" MinHeight="0" Text="{Binding SelectedGridItem.Node.HumanName, ElementName=OPropertyGrid}"  Style="{DynamicResource PropertyGridDescriptionBox}" Grid.Row="1" Margin="4,0,4,5" AcceptsReturn="True" TextWrapping="Wrap" MaxLength="500" IsReadOnly="True"/>
+                                </Grid>
+                            </Expander>
+
+                            <Border x:Name="BlockingLensForFrame" Background="#88000000" Grid.RowSpan="2" Visibility="Collapsed" Margin="3,0,3,5" CornerRadius="3,3,3,3"/>
+
+                        </Grid>
+                    </TabItem>
+
+
+
+
+                    <TabItem x:Name="ShowTab" HorizontalAlignment="Left" Width="193">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="18" Width="Auto" HorizontalAlignment="Left">
+                                <TextBlock Text="{DynamicResource TabItemShow}" Margin="3,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </TabItem.Header>
+
+                        <Grid x:Name="MainShowPane" Height="600" Width="390" Margin="-2,0,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="ShowPaneDivider" Height="Auto" MinHeight="29" MaxHeight="500"/>
+                                <RowDefinition Height="*" MinHeight="29"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+
+                            <Expander x:Name="ShowInfoPane" Header="{DynamicResource HeaderExpanderMetadata}" Grid.Row="0" Height="Auto" Margin="4,0,4,4" Padding="12,12,12,12" VerticalAlignment="Stretch" IsExpanded="True" SizeChanged="ShowInfoPane_SizeChanged" Collapsed="ShowInfoPane_Collapsed" Expanded="ShowInfoPane_Expanded">
+                                <Grid Margin="4,4,4,5">
+                                    <Border VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="3,3,3,3" Background="#ba222222"/>
+                                    <ScrollViewer x:Name="ShowInfoPaneScrollViewer" HorizontalScrollBarVisibility="Disabled"  VerticalScrollBarVisibility="Visible"  Width="Auto" Height="Auto" Margin="2,4,2,4">
+                                        <Grid x:Name="ShowInfoPaneGrid" Margin="10,8,10,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="25"/>
+                                                <RowDefinition Height="69"/>
+                                                <RowDefinition Height="69"/>
+                                                <RowDefinition Height="6"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="80"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Border Grid.RowSpan="5" Grid.ColumnSpan="2" CornerRadius="3,3,3,3" Background="{DynamicResource SelectedBackgroundBrush}" Margin="-8,-6,-8,0"/>
+
+                                            <TextBlock Text="{DynamicResource ShowProps_Title}" Grid.Row="0" Grid.Column="0" FontFamily="Century Gothic" Style="{DynamicResource DefaultTextBlock}"/>
+                                            <TextBox x:Name="txtShowTitle" Grid.Row="0" Grid.Column="1" Margin="0,0,0,4" MaxLength="100" Text="{Binding Path=Title, Mode=TwoWay}"/>
+
+                                            <TextBlock Text="{DynamicResource ShowProps_Synopsis}" Grid.Row="1" Grid.Column="0" FontFamily="Century Gothic" Style="{DynamicResource DefaultTextBlock}"/>
+                                            <TextBox x:Name="txtShowSynopsis" Grid.Row="1" VerticalScrollBarVisibility="Visible" Margin="0,0,0,4" AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="1" MaxLength="500" Text="{Binding Path=Synopsis, Mode=TwoWay}"/>
+
+                                            <TextBlock Text="{DynamicResource ShowProps_Tags}" Grid.Row="2" Grid.Column="0" FontFamily="Century Gothic" Style="{DynamicResource DefaultTextBlock}"/>
+                                            <TextBox x:Name="txtShowTags" Grid.Row="2" VerticalScrollBarVisibility="Visible" Margin="0,0,0,4" AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="1" MaxLength="300" Text="{Binding Path=Tags, Mode=TwoWay,  Converter={StaticResource ToStringEnumerationTagConverter}}"/>
+
+                                            <Expander x:Name="ContributorsExpander" Grid.Row="4" Grid.ColumnSpan="2" Margin="-9,0,-5,0" Style="{DynamicResource PanelExpander}" IsExpanded="False" VerticalAlignment="Stretch" ExpandDirection="Down" Height="Auto" Width="Auto" Expanded="ContributorsExpander_Expanded" Collapsed="ContributorsExpander_Collapsed">
+                                                <Grid  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="10"/>
+                                                        <RowDefinition Height="48"/>
+                                                        <RowDefinition Height="48"/>
+                                                        <RowDefinition Height="48"/>
+                                                        <RowDefinition Height="48"/>
+                                                        <RowDefinition Height="48"/>
+                                                        <RowDefinition Height="48"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="80"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <TextBlock Text="{DynamicResource Credits_Producers}" Grid.Row="1" Grid.Column="0" FontFamily="Century Gothic" Style="{DynamicResource DefaultTextBlock}"/>
+                                                    <TextBox x:Name="txtShowProducers" Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Visible" Margin="0,0,0,4" AcceptsReturn="True" TextWrapping="Wrap" MaxLength="500" Text="{Binding Path=Credits.Producers, Mode=TwoWay,  Converter={StaticResource ToStringEnumerationProducerConverter}}"/>
+
+                                                    <TextBlock Text="{DynamicResource Credits_Directors}" Grid.Row="2" Grid.Column="0" FontFamily="Century Gothic" Style="{DynamicResource DefaultTextBlock}"/>
+                                                    <TextBox x:Name="txtShowDirectors" Grid.Row="2" Grid.Column="1" VerticalScrollBarVisibility="Visible" Margin="0,0,0,4" AcceptsReturn="True" TextWrapping="Wrap" MaxLength="500" Text="{Binding Path=Credits.Directors, Mode=TwoWay,  Converter={StaticResource ToStringEnumerationDirectorConverter}}"/>
+
+                                                    <TextBlock Text="{DynamicResource Credits_Designers}" Grid.Row="3" Grid.Column="0" FontFamily="Century Gothic" Style="{DynamicResource DefaultTextBlock}"/>
+                                                    <TextBox x:Name="txtShowDesigners" Grid.Row="3" Grid.Column="1" VerticalScrollBarVisibility="Visible" Margin="0,0,0,4" AcceptsReturn="True" TextWrapping="Wrap" MaxLength="500" Text="{Binding Path=Credits.Designers, Mode=TwoWay,  Converter={StaticResource ToStringEnumerationDesignerConverter}}"/>
+
+                                                    <TextBlock Text="{DynamicResource Credits_Speakers}" Grid.Row="4" Grid.Column="0" FontFamily="Century Gothic" Style="{DynamicResource DefaultTextBlock}"/>
+                                                    <TextBox x:Name="txtShowSpeakers" Grid.Row="4" VerticalScrollBarVisibility="Visible" Margin="0,0,0,4" AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="1" MaxLength="300" Text="{Binding Path=Credits.Speakers, Mode=TwoWay,  Converter={StaticResource ToStringEnumerationSpeakerConverter}}"/>
+
+                                                    <TextBlock Text="{DynamicResource Credits_Composers}" Grid.Row="5" Grid.Column="0" FontFamily="Century Gothic" Style="{DynamicResource DefaultTextBlock}"/>
+                                                    <TextBox x:Name="txtShowComposers" Grid.Row="5" VerticalScrollBarVisibility="Visible" Margin="0,0,0,4" AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="1" MaxLength="300" Text="{Binding Path=Credits.Composers, Mode=TwoWay,  Converter={StaticResource ToStringEnumerationComposerConverter}}"/>
+
+                                                    <TextBlock Text="{DynamicResource Credits_Developers}" Grid.Row="6" Grid.Column="0" FontFamily="Century Gothic" Style="{DynamicResource DefaultTextBlock}"/>
+                                                    <TextBox x:Name="txtShowDevelopers" Grid.Row="6" VerticalScrollBarVisibility="Visible" Margin="0,0,0,4" AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="1" MaxLength="300" Text="{Binding Path=Credits.Developers, Mode=TwoWay,  Converter={StaticResource ToStringEnumerationDeveloperConverter}}"/>
+                                                </Grid>
+                                            </Expander>
+                                        </Grid>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Expander>
+
+                            <GridSplitter x:Name="OShowPaneSplitter"
+                                          Grid.Row="0" 
+                                          ResizeDirection="Rows"
+                                          HorizontalAlignment="Stretch"
+					                      Height="4"
+                                          VerticalAlignment="Bottom"
+				            />
+
+                            <Expander x:Name="ShowPropertiesPane" Header="{DynamicResource HeaderExpanderProperties}" MinHeight="30" Grid.Row="1" Margin="4,0,4,4" Height="Auto" VerticalAlignment="Stretch" IsExpanded="True" Collapsed="ShowPropertiesPane_Collapsed" Expanded="ShowPropertiesPane_Expanded">
+                                <Grid x:Name="ShowPropertiesPaneGrid">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="48"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Border CornerRadius="3,3,3,3" Background="#b1222222" Margin="4,4,4,5"/>
+                                    <ms:PropertyGrid Name="OShowPropertyGrid" Grid.Row="0" Grid.Column="0" Margin="6,5,4,7" Style="{DynamicResource {x:Static ms:Alloy.StyleKey}}" AllowModifyCollections="False" SelectedObject="{Binding Path=., Mode=TwoWay}" Grouping='{x:Static ms:PropertyGrouping.ByCategory}' Expander.Collapsed="OShowPropertyGrid_Collapsed"/>
+                                    <TextBox x:Name="txtShowPropertyDescription" Text="{Binding SelectedGridItem, ElementName=OShowPropertyGrid, Converter={StaticResource RowToDescription}}" Style="{DynamicResource PropertyGridDescriptionBox}" Grid.Row="1" Margin="4,0,4,5" AcceptsReturn="True" TextWrapping="Wrap" MaxLength="500" IsReadOnly="True"/>
+                                </Grid>
+                            </Expander>
+
+                            <!-- Disabler Lens -->
+                            <Border x:Name="BlockingLensForShow" Background="#88000000" Grid.RowSpan="2" Visibility="Collapsed" Margin="3,0,3,3" CornerRadius="3,3,3,3"/>
+
+                        </Grid>
+
+                    </TabItem>
+
+                </TabControl>
+
+            </StackPanel>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="222"/>
+                </Grid.RowDefinitions>
+                
+
+
+                <!-- View Pane -->
+                <Border x:Name="ViewPaneBorder" Margin="0,2,2,4" Style="{DynamicResource ViewPaneStyle}" Grid.Row="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="27"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- View Pane Content -->
+                        <ScrollViewer Grid.Row="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Width="Auto" Height="Auto" x:Name="ViewPane">
+                            <Canvas x:Name="FrameContainer" Width="1024" Height="576" Background="White" Visibility="Hidden">
+                                
+                                <!-- Background Image PlaceHolder Layer -->
+                                <Image x:Name="OFrameBackground" Width="1024" Height="576" Canvas.Top="0" Canvas.Left="0"/>
+                                
+                                <!-- Xaml Content PlaceHolder Layer -->
+                                <Canvas x:Name="XamlContentPlaceHolder" Width="1024" Height="576" Canvas.Top="0" Canvas.Left="0">
+                                    <Canvas.Clip>
+                                        <RectangleGeometry Rect="0, 0, 1024, 576"/>
+                                    </Canvas.Clip>
+                                </Canvas>
+
+                                <!-- Control PlaceHolder Layer -->
+                                <Canvas x:Name="ControlsPlaceHolder" Width="1024" Height="576" Canvas.Top="0" Canvas.Left="0">
+                                    <Canvas.Clip>
+                                        <RectangleGeometry x:Name="OClip" Rect="0, 0, 1024, 576"/>
+                                    </Canvas.Clip>
+                                </Canvas>
+
+                                <!-- Channel PlaceHolder -->
+                                <Image x:Name="WebChannelLogo"  Source="\Assets\Bitmaps\ViewPane\ChannelPlaceHolder.png" ToolTip="{DynamicResource ToolTipInsertChannelLogo}" Canvas.Left="10" Canvas.Top="10" Opacity="0.6"/>
+
+
+                                <!-- Bottom Bar -->
+                                <ProducerAlpha:BottomBar x:Name="OBBar" Canvas.Left="0" Canvas.Top="499.5"/>
+
+                                <!-- Error Reporter -->
+                                <ProducerAlpha:ErrorReporter x:Name="OErrorReporter" Canvas.Top="0" Canvas.Left="0" Visibility="Collapsed"/>
+
+                                <Canvas.LayoutTransform>
+                                    <ScaleTransform x:Name="DocumentSize" ScaleX=".90" ScaleY=".90"/>
+                                </Canvas.LayoutTransform>
+                            </Canvas>
+                        </ScrollViewer>
+
+
+                        <!-- Wait for Publish Dialog -->
+                        <Grid Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="576">
+                            <ProducerAlpha:WaitForPublishDialog x:Name="WaitForPublish" Opacity="1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Visibility="Hidden" />
+                        </Grid>
+                        
+                        <!-- ViewPane Toolbox -->                        
+                        <Grid x:Name="Toolbox" Grid.Row="1" HorizontalAlignment="Stretch" Background="#ba151515">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"  x:Name="RecordingControl"/>
+                                <ColumnDefinition Width="200" x:Name="ZoomControls"/>
+                                <ColumnDefinition Width="*"   x:Name="Spacer_1"/>
+                                <ColumnDefinition Width="200" x:Name="MasterVolumeControls"/>
+                                <ColumnDefinition Width="*"   x:Name="Spacer_2"/>
+                                <ColumnDefinition Width="55"  x:Name="InsertShowAssets"/>
+                                <ColumnDefinition Width="40"  x:Name="Spacer_3"/>
+                                <ColumnDefinition Width="235" x:Name="InsertFrameAssets"/>
+                                <ColumnDefinition Width="20"  x:Name="Spacer_4"/>
+                                <ColumnDefinition Width="120" x:Name="MasterControls"/>
+                                <ColumnDefinition Width="40"  x:Name="Spacer_5"/>
+                            </Grid.ColumnDefinitions>
+
+                            
+                            
+                            <Border Grid.ColumnSpan="7" BorderThickness="1,1,1,1" Background="{DynamicResource LightBrush}" BorderBrush="{DynamicResource LightBrush}"/>
+
+                            <!-- Recording Control Section -->
+                            <StackPanel Grid.Column="0" FlowDirection="LeftToRight" Orientation="Horizontal" HorizontalAlignment="Right" Width="Auto" Margin="0,2,4,2">
+                                <ToggleButton x:Name="toggleRecording" Style="{DynamicResource RecordingToggleButton}" Height="24" Width="24" IsChecked="False" Checked="toggleRecording_Checked" Unchecked="toggleRecording_Unchecked"/>
+                            </StackPanel>
+
+                            <!-- Zoom Controls Section -->
+                            <StackPanel Grid.Column="1" FlowDirection="LeftToRight" Orientation="Horizontal" HorizontalAlignment="Left" Width="Auto">
+                                <Slider x:Name="ZoomSlider" Cursor="Hand" Width="100" Margin="10,7,0,0" Minimum=".30" Maximum="3.0" Value="0.90" SmallChange=".10" Grid.Row="2" HorizontalAlignment="Left" ValueChanged="ZoomSlider_ValueChanged"/>
+                                <TextBlock FontSize="11" Style="{DynamicResource DefaultTextBlock}" Text="{Binding ElementName=ZoomSlider, Path=Value, Converter={StaticResource FormattingConverter}, ConverterParameter=\{0:P\}, Mode=Default}" Grid.Row="2" Margin="10,6,5,0"/>
+                                <Button x:Name="cmdZoomToExtents" ToolTip="{DynamicResource ToolTipZoomToExtents}" Margin="0,4,0,0" Style="{DynamicResource InvisibleButton}" Click="cmdZoomToExtents_Click">
+                                    <Image Source="\Assets\Icons\MainToolbar\ToolbarControls\ZoomToExtents.png"/>
+                                    <Button.RenderTransform>
+                                        <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                                    </Button.RenderTransform>
+                                </Button>
+                            </StackPanel>
+
+                            <!-- Master Volume Section -->
+                            <StackPanel Grid.Column="3" FlowDirection="LeftToRight" Orientation="Horizontal" HorizontalAlignment="Left" Width="Auto">
+                                <ToggleButton x:Name="toggleMute" Style="{DynamicResource MuteToggleButton}" Height="24" Width="24" IsChecked="{Binding Path=DesignTimeHelper.VideoMuteVolume, Mode=OneWay}" Checked="toggleMute_Checked" Unchecked="toggleMute_Unchecked"/>
+                                <Slider x:Name="VolumeSlider" Cursor="Hand" Width="100" Margin="5,7,0,0" Minimum=".0" Maximum="1" Value="{Binding Path=VideoVolume, Mode=TwoWay}" SmallChange=".01" HorizontalAlignment="Left" ValueChanged="VolumeSlider_ValueChanged"/>
+                                <TextBlock FontSize="11" Style="{DynamicResource DefaultTextBlock}" Text="{Binding ElementName=VolumeSlider, Path=Value, Converter={StaticResource FormattingConverter}, ConverterParameter=\{0:P\}, Mode=Default}" Grid.Row="2" Margin="10,6,5,0"/>
+                            </StackPanel>
+
+                            <!-- Insert Show Assets Section -->
+                            <StackPanel Grid.Column="5" FlowDirection="LeftToRight" Orientation="Horizontal" HorizontalAlignment="Left" Width="Auto">
+                                <Button x:Name="cmdInsertChannelImage" ToolTip="{DynamicResource ToolTipInsertChannelImage}" RenderTransformOrigin=".5,.5" Style="{DynamicResource InvisibleButton}" Margin="0,0,-5,0" Click="cmdInsertChannelImage_Click">
+                                    <Image Source="\Assets\Icons\MainToolbar\ChannelImage\ChannelImage.png">
+                                    </Image>
+                                </Button>
+<!--
+                                <m:SplitButton ToolTip="{DynamicResource ToolTipNewFrame}" x:Name="cmdAddNVideo" Placement="Bottom" Height="23.823" FontSize="14" VerticalAlignment="Top" Style="{DynamicResource SplitButtonStyle}" Click="cmdAddFrame_Click" Margin="0,0,5,0">
+                                    <MenuItem Header="{DynamicResource WebSlide}" x:Name="mnuCaptureVideo" Style="{DynamicResource ContextMenuStyle}" Click="mnuAddWebSlide_Click" IsChecked="True"/>
+                                    <MenuItem Header="{DynamicResource VideoFrame}" x:Name="mnuImportVideo" Style="{DynamicResource ContextMenuStyle}" Click="mnuAddVideoFrame_Click"/>
+                                </m:SplitButton>
+
+-->
+                                <Button x:Name="cmdInsertNVideo" ToolTip="{DynamicResource ToolTipInsertNVideo}" RenderTransformOrigin=".5,.5" Style="{DynamicResource InvisibleButton}" Click="cmdInsertNVideo_Click">
+                                    <Image Source="\Assets\Icons\MainToolbar\NVideo\NVideo.png">
+                                    </Image>
+                                </Button>
+
+                            </StackPanel>
+
+                            <!-- Insert Frame Assets Section -->
+                            <StackPanel Grid.Column="7" FlowDirection="LeftToRight" Orientation="Horizontal" HorizontalAlignment="Right" Width="Auto" Margin="0,2,4,2">
+                                <Button x:Name="cmdInsertXamlFromBlend" IsEnabled="{Binding Path=., Converter={StaticResource IAcceptsControlsToBooleanForXamlImportConverter}, Mode=OneWay}" ToolTip="{DynamicResource ToolTipInsertXamlFromBlend}" RenderTransformOrigin=".5,.5" Style="{DynamicResource InvisibleButton}" Click="cmdInsertXamlFromBlend_Click">
+                                    <Image Source="\Assets\Icons\MainToolbar\Controls\XamlFromBlend.png">                     
+                                    </Image>
+                                </Button>
+                                
+                                <Button x:Name="cmdInsertImageBackground" IsEnabled="{Binding Path=., Converter={StaticResource IAcceptsBackgroundImageToBooleanConverter}, Mode=OneWay}" ToolTip="{DynamicResource ToolTipInsertImageBackground}" RenderTransformOrigin=".5,.5" Style="{DynamicResource InvisibleButton}" Click="cmdInsertImageBackground_Click">
+                                    <Image Source="\Assets\Icons\MainToolbar\Controls\ImageBackground.png">
+                                    </Image>
+                                </Button>
+
+                                <Button x:Name="cmdInsertTextAnimation" IsEnabled="{Binding Path=., Converter={StaticResource IAcceptsControlsToBooleanConverter}, Mode=OneWay}" ToolTip="{DynamicResource ToolTipInsertTextAnimation}" RenderTransformOrigin=".5,.5" Style="{DynamicResource InvisibleButton}">
+                                    <Image Source="\Assets\Icons\MainToolbar\Controls\AnimateText.png">
+                                    </Image>
+                                </Button>
+
+                                <Button x:Name="cmdInsertZoomPan" IsEnabled="{Binding Path=., Converter={StaticResource IAcceptsControlsToBooleanConverter}, Mode=OneWay}" ToolTip="{DynamicResource ToolTipInsertZoomPan}" Style="{DynamicResource InvisibleButton}">
+                                    <Image Source="\Assets\Icons\MainToolbar\Controls\ZoomPan.png"/>
+                                </Button>
+
+                                <Button x:Name="cmdInsertMoreMenu" IsEnabled="{Binding Path=., Converter={StaticResource IAcceptsControlsToBooleanConverter}, Mode=OneWay}" ToolTip="{DynamicResource ToolTipInsertMoreMenu}" Style="{DynamicResource InvisibleButton}" Click="cmdInsertMoreMenu_Click">
+                                    <Image Source="\Assets\Icons\MainToolbar\Controls\MoreMenu.png"/>
+                                </Button>
+
+                                <Button x:Name="cmdInsertTintifier" IsEnabled="{Binding Path=., Converter={StaticResource IAcceptsControlsToBooleanConverter}, Mode=OneWay}" ToolTip="{DynamicResource ToolTipInsertTintifier}" Style="{DynamicResource InvisibleButton}">
+                                    <Image Source="\Assets\Icons\MainToolbar\Controls\Tintify.png"/>
+                                </Button>
+
+                                <Button x:Name="cmdInsertWatchclip" IsEnabled="{Binding Path=., Converter={StaticResource IAcceptsControlsToBooleanConverter}, Mode=OneWay}" ToolTip="{DynamicResource ToolTipInsertWatchClip}" Style="{DynamicResource InvisibleButton}">
+                                    <Image Source="\Assets\Icons\MainToolbar\Controls\Watchclip.png"/>
+                                </Button>
+
+                            </StackPanel>
+
+                            <!-- Master Control Section -->
+                            <StackPanel Grid.Column="9" FlowDirection="LeftToRight" Orientation="Horizontal" HorizontalAlignment="Right" Width="Auto" Margin="0,2,4,2">
+
+                                <ToggleButton x:Name="toggleFrameAnimation" Style="{DynamicResource FrameAnimationToggleButton}" Margin="0,-2,3,0" Height="24" Width="24" Checked="toggleFrameAnimation_Checked" Unchecked="toggleFrameAnimation_Unchecked"/>
+                                
+                                <Button x:Name="cmdPreviewShow" ToolTip="{DynamicResource ToolTipControlPanePreviewButton}" Style="{DynamicResource InvisibleButton}" Command="ProducerAlpha:frmMain.PreviewCommand">
+                                    <Image Source="\Assets\Icons\MainToolbar\Publish\Preview.png"/>
+                                </Button>
+
+                                <Button x:Name="cmdPublishShow" ToolTip="{DynamicResource ToolTipControlPanePublishButton}" Style="{DynamicResource InvisibleButton}" Command="ProducerAlpha:frmMain.PublishCommand">
+                                    <Image Source="\Assets\Icons\MainToolbar\Publish\Publish.png"/>
+                                </Button>
+
+                            </StackPanel>
+                            
+                            <!-- Blocking Lenses -->
+                            <Border x:Name="BlockingLensForInsertShowAssets"   Grid.Column="5" Background="#88000000" Margin="4,1,0,3" Visibility="Collapsed"/>
+                            <Border x:Name="BlockingLensForInsertFrameAssets1" Grid.Column="7" Background="#88000000" Margin="6,1,0,3" Visibility="Collapsed" Width="66" HorizontalAlignment="Left"/>
+                            <Border x:Name="BlockingLensForInsertFrameAssets2" Grid.Column="7" Background="#88000000" Margin="6,1,4,3" Visibility="Collapsed" Width="159" HorizontalAlignment="Right"/>
+                            <Border x:Name="BlockingLensForControlSection"     Grid.Column="9" Background="#88000000" Margin="6,1,0,3" Visibility="Collapsed" Width="60" HorizontalAlignment="Right"/>
+                            
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <!-- Control Pane -->
+                <Grid Grid.Row="1" Width="Auto" Height="Auto" DockPanel.Dock="Bottom" VerticalAlignment="Stretch" x:Name="ControlPane" Margin="0,0,2,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TabControl Grid.Row="0" Grid.Column="0" IsSynchronizedWithCurrentItem="True" Width="Auto" Height="222" HorizontalAlignment="Stretch" Margin="0,0,0,0" >
+                        <TabItem x:Name="TimeTab">
+                            <TabItem.Header>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="18" Width="86">
+                                    <TextBlock Text="{DynamicResource TabItemTime}" Margin="3,0,0,0" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </TabItem.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="3,3,3,3" Margin="0,0,0,4">
+                                    <Border.Background>
+                                        <SolidColorBrush Color="{DynamicResource MainColor}"/>
+                                    </Border.Background>
+                                </Border>
+                                <Border Background="{DynamicResource BackgroundBrush}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="3,3,3,3" Margin="5,5,5,10"/>
+                                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="0" Margin="5,5,5,4">
+
+                                    <TabControl TabStripPlacement="Left" Margin="1,1,1,8" Height="Auto" Width="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" IsSynchronizedWithCurrentItem="True">
+                                        <TabItem x:Name="TabSyncLink" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <TabItem.Header>
+                                                <TextBlock Padding="18,0,18,0" Text="{DynamicResource TabItemSyncLink}"/>
+                                            </TabItem.Header>
+
+                                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>                                                
+                                                <TextBlock x:Name="txtDebug" Text="Debug" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed"/>
+
+                                                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <tlc:SLTimelineController Grid.Row="0" x:Name="OTLC" VideoPauseRequested="OTLC_VideoPauseRequested"/>
+                                                    
+                                                    <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right">
+                                                        <Button x:Name="cmdAddMarker" 
+                                                                TextBlock.FontSize="14"
+                                                                TextBlock.TextAlignment="Center"
+                                                                VerticalAlignment="Center"
+                                                                Height="35"
+                                                                Width="42"
+                                                                Margin="5,3,5,0"
+                                                                Padding="0,0,0,0"
+                                                                ToolTip="Add Marker"
+                                                                Click="cmdAddMarker_Click"
+                                                        >
+                                                            <Image Source="\Assets\Icons\SyncLinks\AddMarker.png" Width="35" Height="35"/>
+                                                        </Button>
+                                                        <Button x:Name="cmdRemoveMarker" 
+                                                                TextBlock.FontSize="14"
+                                                                TextBlock.TextAlignment="Center"
+                                                                VerticalAlignment="Center"
+                                                                Height="35"
+                                                                Width="42"
+                                                                Margin="5,3,5,0"
+                                                                Padding="0,0,0,0"                                                                
+                                                                ToolTip="Remove Marker"
+                                                                Click="cmdRemoveMarker_Click"
+                                                        >
+                                                            <Image Source="\Assets\Icons\SyncLinks\RemoveMarker.png" Width="35" Height="35"/>
+                                                        </Button>
+                                                    </StackPanel>
+                                                </Grid>
+
+                                            </Grid>
+                                        </TabItem>
+                                        <TabItem x:Name="TabAnimation" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <TabItem.Header>
+                                                <TextBlock Padding="20,0,20,0" Text="{DynamicResource TabItemAnimate}"/>
+                                            </TabItem.Header>
+
+                                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <ScrollViewer Width="Auto" Height="Auto">
+                                                    <Image Source="\Assets\Bitmaps\Comps\AnimationEngine.jpg" Width="1189" Height="279"/>
+                                                </ScrollViewer>
+                                            </Grid>
+                                        </TabItem>
+                                    </TabControl>
+
+                                </Grid>
+
+                                <!-- Disabler Lens -->
+                                <Border x:Name="BlockingLensForTimeTab" Background="#88000000" Visibility="Collapsed" Margin="3,3,3,8" CornerRadius="3,3,3,3"/>
+
+                            </Grid>
+                        </TabItem>
+
+                        <TabItem x:Name="ExternalLinksTab">
+                            <TabItem.Header>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="18" Width="86">
+                                    <TextBlock Text="{DynamicResource TabItemExternalLinks}" Margin="3,0,0,0" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </TabItem.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="3,3,3,3" Margin="0,0,0,4">
+                                    <Border.Background>
+                                        <SolidColorBrush Color="{DynamicResource MainColor}"/>
+                                    </Border.Background>
+                                </Border>
+                                <Border Background="{DynamicResource BackgroundBrush}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="3,3,3,3" Margin="5,5,5,10"/>
+                                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="0" Margin="5,5,5,4">
+
+                                    <TabControl TabStripPlacement="Left" Margin="1,1,1,8" Height="Auto" Width="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" IsSynchronizedWithCurrentItem="True">
+                                        <TabItem x:Name="TabXamlLinks" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <TabItem.Header>
+                                                <TextBlock Padding="4,0,4,0" Text="Xaml Links"/>
+                                            </TabItem.Header>
+
+                                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Grid.Resources>
+                                                    <!-- Item Template -->
+                                                    <Style x:Key="XamlImportItemContainerStyle" TargetType ="ListViewItem">
+                                                        <!-- Control Main Properties -->
+                                                        <Setter Property="FontSize" Value="9"/>
+                                                        <Setter Property="Height" Value="16"/>
+                                                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                                        <Setter Property="VerticalContentAlignment"   Value="Stretch" />
+                                                        <Setter Property="Background">
+                                                            <Setter.Value>
+                                                                <Binding RelativeSource="{RelativeSource Self}" Converter="{StaticResource RowBackgroundConverter}"/>
+                                                            </Setter.Value>
+                                                        </Setter>
+
+                                                        <!-- Control Template -->
+                                                        <Setter Property ="Template">
+                                                            <Setter.Value>
+                                                                <ControlTemplate TargetType ="{x:Type ListViewItem}">
+                                                                    
+                                                                    <!-- Control Definition -->
+                                                                    <Grid x:Name="xContainer" Height="16" Background ="{TemplateBinding Background}">
+                                                                        <GridViewRowPresenter x:Name="ItemContent" Focusable="False" Grid.Row="0" Height="16" TextBlock.Foreground="White">
+                                                                        </GridViewRowPresenter>
+                                                                    </Grid>
+
+                                                                    <!-- Control Triggers -->
+                                                                    <ControlTemplate.Triggers>
+                                                                        <Trigger Property="IsMouseOver" Value="true">
+                                                                            <Setter Property="Background">
+                                                                                <Setter.Value>
+                                                                                    <LinearGradientBrush EndPoint="0.5,0.976" StartPoint="0.5,0.039">
+                                                                                        <GradientStop Color="#7F777777" Offset="0" />
+                                                                                        <GradientStop Color="#35FFFFFF" Offset="1" />
+                                                                                    </LinearGradientBrush>
+                                                                                </Setter.Value>
+                                                                            </Setter>
+                                                                        </Trigger>
+                                                                    </ControlTemplate.Triggers>
+                                                                    
+                                                                </ControlTemplate>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                        
+                                                        <!-- Control Events -->
+                                                        <!--
+                                                        <EventSetter Event="MouseDoubleClick" Handler="" />
+                                                        -->
+                                                    </Style>
+
+
+
+                                                </Grid.Resources>
+
+                                                <!-- Start ListView -->
+                                                <ListView x:Name="ManageXamlLinksListView"
+                                                          ItemContainerStyle="{StaticResource XamlImportItemContainerStyle}"                                                          
+                    				                      Background="Black"
+				                                          VirtualizingStackPanel.IsVirtualizing="True"
+				                                          IsSynchronizedWithCurrentItem="True"
+                                                          Grid.Row="0"
+                                                          Grid.Column="0"
+                                                          BorderBrush="Black"
+                                                          ButtonBase.Click="ManageXamlLinksListView_Click"
+                                                          MouseDoubleClick="ManageXamlLinksListView_MouseDoubleClick"
+                                                          
+				                                >
+
+                                                    <ListView.View>
+                                                        <GridView								
+						                                   AllowsColumnReorder="False"
+
+                                                        >
+
+                                                            <!-- Column 1: Frame Number  -->
+                                                            <GridViewColumn Header="Frame #" >
+                                                                <GridViewColumn.CellTemplate >
+                                                                    <DataTemplate>
+                                                                        <TextBlock x:Name="tbXamlLinkID" Text="{Binding Path=Id}" VerticalAlignment="Center" FontSize="10"/>
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn >
+
+                                                            <!-- Column 2: Frame Image  -->
+                                                            <GridViewColumn Header="Thumb" >
+                                                                <GridViewColumn.CellTemplate >
+                                                                    <DataTemplate>
+                                                                        <Border Background="Transparent" BorderBrush="Black" BorderThickness="0.5">
+                                                                            <Image x:Name="imgXamlLinkFrameImage" Source="{Binding Path=Script.ImageUrl}" Height="12" VerticalAlignment="Center"/>
+                                                                        </Border>
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn >
+
+                                                            <!-- Column 3: Frame Title  -->
+                                                            <GridViewColumn Header="Description" Width="200">
+                                                                <GridViewColumn.CellTemplate >
+                                                                    <DataTemplate>
+                                                                        <TextBlock FontSize="10" Text="{Binding Path=Script.Title}"/>
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn >
+                                                            
+                                                            <!-- Column 4: Status Icon  -->
+                                                            <GridViewColumn Header="" Width="23"  >
+                                                                <GridViewColumn.CellTemplate >
+                                                                    <DataTemplate>
+                                                                       <Image x:Name="imgXamlLinkStatusIcon" Source="{Binding Path=DesignTimeHelper.XamlInfo, Converter={StaticResource DetectXamlImportStatusImageConverter},  Mode=OneWay}" Width="12" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn >
+
+                                                            <!-- Column 5: Status Description  -->
+                                                            <GridViewColumn Header="Link Status" Width="Auto">
+                                                                <GridViewColumn.CellTemplate>
+                                                                    <DataTemplate>
+                                                                        <TextBlock x:Name="tbXamlLinkStatusDescription" Text="{Binding Path=DesignTimeHelper.XamlInfo, Converter={StaticResource DetectXamlImportStatusTextConverter}, Mode=TwoWay}" HorizontalAlignment="Left" FontSize="10"/>
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn >
+
+                                                            <!-- Column 6: Command Column  -->
+                                                            <GridViewColumn Header="Commands" Width="Auto"  >
+                                                                <GridViewColumn.CellTemplate>
+                                                                    <DataTemplate>
+                                                                        <StackPanel Orientation="Horizontal">
+                                                                            <Button x:Name="cmdXamlLinkRemoveXaml" Content="Remove Xaml" Height="16" Visibility="{Binding Path=DesignTimeHelper.XamlInfo, Converter={StaticResource XamlLinkRemoveXamlButtonVisibilityConverter}}"/>
+                                                                            <Button x:Name="cmdXamlLinkCreateLink" Content="Create Link" Height="16" Visibility="{Binding Path=DesignTimeHelper.XamlInfo, Converter={StaticResource XamlLinkCreateLinkButtonVisibilityConverter}}"/>
+                                                                            <Button x:Name="cmdXamlLinkUpdateLink" Content="Update Link" Height="16" Visibility="{Binding Path=DesignTimeHelper.XamlInfo, Converter={StaticResource XamlLinkUpdateLinkButtonVisibilityConverter}}"/>
+                                                                            <Button x:Name="cmdXamlLinkRemoveLink" Content="Remove Link" Height="16" Visibility="{Binding Path=DesignTimeHelper.XamlInfo, Converter={StaticResource XamlLinkRemoveLinkButtonVisibilityConverter}}"/>
+                                                                        </StackPanel>
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn >
+
+                                                        </GridView>
+                                                    </ListView.View>
+                                                </ListView >
+                                                
+                                                <!-- End ListView -->
+
+                                            </Grid>
+                                        </TabItem>
+                                        <TabItem x:Name="TabResourceLinks" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <TabItem.Header>
+                                                <TextBlock Padding="4,0,4,0" Text="Resource Links"/>
+                                            </TabItem.Header>
+
+                                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+
+
+                                                <Grid.Resources>
+                                                    <!-- Item Template -->
+                                                    <Style x:Key="ResourceLinksItemContainerStyle" TargetType ="ListViewItem">
+                                                        <!-- Control Main Properties -->
+                                                        <Setter Property="FontSize" Value="9"/>
+                                                        <Setter Property="Height" Value="16"/>
+                                                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                                        <Setter Property="VerticalContentAlignment"   Value="Stretch" />
+                                                        <Setter Property="Background">
+                                                            <Setter.Value>
+                                                                <Binding RelativeSource="{RelativeSource Self}" Converter="{StaticResource RowBackgroundConverter}"/>
+                                                            </Setter.Value>
+                                                        </Setter>
+
+                                                        <!-- Control Template -->
+                                                        <Setter Property ="Template">
+                                                            <Setter.Value>
+                                                                <ControlTemplate TargetType ="{x:Type ListViewItem}">
+
+                                                                    <!-- Control Definition -->
+                                                                    <Grid x:Name="xContainer" Height="16" Background ="{TemplateBinding Background}">
+                                                                        <GridViewRowPresenter x:Name="ItemContent" Focusable="False" Grid.Row="0" Height="16" TextBlock.Foreground="White">
+                                                                        </GridViewRowPresenter>
+                                                                    </Grid>
+
+                                                                    <!-- Control Triggers -->
+                                                                    <ControlTemplate.Triggers>
+                                                                        <Trigger Property="IsMouseOver" Value="true">
+                                                                            <Setter Property="Background">
+                                                                                <Setter.Value>
+                                                                                    <LinearGradientBrush EndPoint="0.5,0.976" StartPoint="0.5,0.039">
+                                                                                        <GradientStop Color="#7F777777" Offset="0" />
+                                                                                        <GradientStop Color="#35FFFFFF" Offset="1" />
+                                                                                    </LinearGradientBrush>
+                                                                                </Setter.Value>
+                                                                            </Setter>
+                                                                        </Trigger>
+                                                                    </ControlTemplate.Triggers>
+
+                                                                </ControlTemplate>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Style>
+
+                                                </Grid.Resources>
+
+                                                <!-- Start Broken Resources ListView -->
+                                                <ListView x:Name="ManageBrokenResourceLinksListView"
+                                                          ItemContainerStyle="{StaticResource ResourceLinksItemContainerStyle}"
+                    				                      Background="Black"
+				                                          VirtualizingStackPanel.IsVirtualizing="True"
+				                                          IsSynchronizedWithCurrentItem="True"
+                                                          Grid.Row="0"
+                                                          Grid.Column="0"
+                                                          BorderBrush="Black"
+                                                          ButtonBase.Click="ManageBrokenResourceLinksListView_Click"                                                        
+				                                >
+
+                                                    <ListView.View>
+                                                        <GridView
+						                                   AllowsColumnReorder="False"
+
+                                                        >
+
+                                                            <!-- Column 1: Frame Number  -->
+                                                            <GridViewColumn Header="Frame #" Width="Auto">
+                                                                <GridViewColumn.CellTemplate >
+                                                                    <DataTemplate>
+                                                                        <TextBlock x:Name="tbResourceLinkID" Text="{Binding Path=FrameIDTitle}" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="10"/>
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn >
+
+                                                            <!-- Column 2: File Type  -->
+                                                            <GridViewColumn Header="Type" Width="50">
+                                                                <GridViewColumn.CellTemplate >
+                                                                    <DataTemplate>
+                                                                        <TextBlock FontSize="10" Text="{Binding Path=Type}" HorizontalAlignment="Center"/>
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn >
+
+                                                            <!-- Column 3: Frame Title  -->
+                                                            <GridViewColumn Header="Description" Width="200">
+                                                                <GridViewColumn.CellTemplate >
+                                                                    <DataTemplate>
+                                                                        <TextBlock FontSize="10" Text="{Binding Path=Description, Mode=OneWay, Converter={StaticResource AssetTypeToStringConverter}}" HorizontalAlignment="Left"/>
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn >
+
+                                                            <!-- Column 4: Missing File Name / Path -->
+                                                            <GridViewColumn Header="File Missing" Width="250">
+                                                                <GridViewColumn.CellTemplate>
+                                                                    <DataTemplate>
+                                                                        <TextBlock x:Name="tbResourceLinkStatusDescription" Text="{Binding Path=FileName}" HorizontalAlignment="Left" FontSize="10"/>
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn >
+
+                                                            <!-- Column 5: Command Column  -->
+                                                            <GridViewColumn Header="Commands" Width="65"  >
+                                                                <GridViewColumn.CellTemplate>
+                                                                    <DataTemplate>
+                                                                        <StackPanel Orientation="Horizontal">
+                                                                            <Button x:Name="cmdResourceLinkImport" Content="Fix" Height="16" Width="45" TextBlock.TextAlignment="Center" HorizontalAlignment="Center"/>
+                                                                        </StackPanel>
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn >
+
+                                                        </GridView>
+                                                    </ListView.View>
+                                                </ListView >
+
+                                                <!-- End ListView -->
+
+                                            </Grid>
+                                        </TabItem>
+                                    </TabControl>
+
+                                </Grid>
+
+                                <!-- Disabler Lens -->
+                                <Border x:Name="BlockingLensForExternalLinksTab" Background="#88000000" Visibility="Collapsed" Margin="3,3,3,8" CornerRadius="3,3,3,3"/>
+
+                            </Grid>
+                        </TabItem>
+                        
+                        
+                        <TabItem x:Name="TabConsole">
+                            <TabItem.Header>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="18" Width="86">
+                                    <TextBlock Text="Console" Margin="3,0,0,0" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </TabItem.Header>
+                            <TabItem.BitmapEffectInput>
+                                <BitmapEffectInput/>
+                            </TabItem.BitmapEffectInput>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="3,3,3,3" Margin="0,0,0,4">
+                                    <Border.Background>
+                                        <SolidColorBrush Color="{DynamicResource MainColor}"/>
+                                    </Border.Background>
+                                </Border>
+                                <Border Background="{DynamicResource BackgroundBrush}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="3,3,3,3" Margin="5,5,5,10"/>
+                                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="0" Margin="5,5,5,4">
+                                    <Grid.Resources>
+                                        <ContextMenu x:Key="ConsoleContextMenu">
+                                            <MenuItem Command="ProducerAlpha:frmMain.SaveConsole"/>
+                                            <MenuItem Command="ProducerAlpha:frmMain.ClearConsole"/>
+                                        </ContextMenu>
+                                    </Grid.Resources>
+
+
+                                    <TextBox x:Name="txtConsole" ContextMenu="{StaticResource ConsoleContextMenu}" Width="Auto" Height="Auto" TextWrapping="Wrap" AcceptsReturn="True" IsReadOnly="True" Margin="0,0,0,5" VerticalScrollBarVisibility="Auto"/>
+
+                                </Grid>
+                            
+                                <!-- Disabler Lens -->
+                                <Border x:Name="BlockingLensForConsoleTab" Background="#88000000" Visibility="Collapsed" Margin="3,3,3,8" CornerRadius="3,3,3,3"/>
+
+                            </Grid>
+                        </TabItem>
+
+                    </TabControl>
+
+                </Grid>
+
+            </Grid>
+        </DockPanel>
+        
+        <!-- Blocking Lens -->
+        <Canvas x:Name="BlockingLens" 
+                Background="Black" 
+                Opacity=".7" 
+                Grid.RowSpan="2" 
+                VerticalAlignment="Stretch" 
+                HorizontalAlignment="Stretch" 
+                Visibility="Hidden"
+        />
+
+        <!-- Welcome Screen -->
+        <ProducerAlpha:Welcome x:Name="Welcome" 
+                               Opacity="1" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               Grid.Row="0" 
+                               Visibility="Hidden" 
+                               NewButtonClick="WelcomeUserControl_NewButtonClick" 
+                               OpenButtonClick="Welcome_OpenButtonClick" 
+                               OpenRecentFileButtonClick="Welcome_OpenRecentFileButtonClick" 
+                               Grid.RowSpan="2"
+        />
+
+        <!-- New Dialog -->
+        <ProducerAlpha:NewDialog x:Name="NewDialog" 
+                                 Opacity="1" 
+                                 VerticalAlignment="Center" 
+                                 HorizontalAlignment="Center" 
+                                 Grid.Row="0" 
+                                 Visibility="Hidden" 
+                                 CloseButtonClick="NewDialog_CloseButtonClick" 
+                                 CancelButtonClick="NewDialog_CancelButtonClick" 
+                                 OKButtonClick="NewDialog_OKButtonClick" 
+                                 Grid.RowSpan="2"
+        />
+
+        <!-- Select Channel Dialog -->
+        <ProducerAlpha:WebChannelSelector x:Name="WebChannelSelectorDialog" 
+                                          Opacity="1" 
+                                          VerticalAlignment="Center" 
+                                          HorizontalAlignment="Center" 
+                                          Grid.Row="0" 
+                                          Visibility="Hidden" 
+                                          Grid.RowSpan="2"
+                                          OKButtonClick="WebChannelSelectorDialog_OKButtonClick" 
+                                          CancelButtonClick="WebChannelSelectorDialog_CancelButtonClick"
+        />
+
+    </Grid>
+</Window>

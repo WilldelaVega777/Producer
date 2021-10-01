@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Xml.Serialization;
+
+namespace ProducerAlpha
+{
+    [Serializable]
+    public abstract class Contributor : Observable
+    {
+
+        //-----------------------------------------------------------------------------------
+        // Private Fields Section
+        //-----------------------------------------------------------------------------------
+        private string name;
+        private string info;
+
+
+        //-----------------------------------------------------------------------------------
+        // Public Properties Section
+        //-----------------------------------------------------------------------------------
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+            set
+            {
+                Set<string>(ref this.name, value, "Name");
+            }
+        }
+
+        //-----------------------------------------------------------------------------------
+        public string Info
+        {
+            get
+            {
+                return this.info;
+            }
+            set
+            {
+                Set<string>(ref this.info, value, "Info");
+            }
+        }
+
+        //-----------------------------------------------------------------------------------
+        // Constructor Method Section
+        //-----------------------------------------------------------------------------------
+        public Contributor() { }
+    }
+}

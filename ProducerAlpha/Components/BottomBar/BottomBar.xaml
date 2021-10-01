@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="ProducerAlpha.BottomBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ProducerAlpha="clr-namespace:ProducerAlpha"
+    Height="77.5" Width="1024" 
+    Loaded="UserControl_Loaded" 
+>
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+
+            <!-- Converters -->
+            <ProducerAlpha:ToStringEnumerationProducerConverter x:Key="BBToStringEnumerationProducerConverter"/>
+
+            <!-- Storyboards -->
+            <Storyboard x:Key="OSBAutoHide_Hidding" Completed="OSBAutoHideHidding_Completed">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="InternalContainer" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                    <SplineDoubleKeyFrame KeySpline="0.462,0.107,0.736,0.412" KeyTime="00:00:00.5000000" Value="82"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            
+            <Storyboard x:Key="OSBAutoHide_Showing" Completed="OSBAutoHideShowing_Completed" >
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="InternalContainer" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00" Value="71"/>
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0" KeySpline="0,0,0.733,0.342"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+
+            <Storyboard x:Key="OSBCenterWSFL" Completed="OSBCenterWSFL_Completed" >
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="WSFLPlaceHolder" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                    <SplineDoubleKeyFrame KeySpline="0.462,0.107,0.736,0.412" KeyTime="00:00:00.5000000" Value="-131.5"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+
+            <Storyboard x:Key="OSBRestoreWSFL" Completed="OSBRestoreWSFL_Completed" >
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="WSFLPlaceHolder" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-131.5"/>
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0" KeySpline="0,0,0.733,0.342"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+
+    <Canvas x:Name="ExternalContainer" Height="77.5" Width="1024" MouseLeave="ExternalContainer_MouseLeave">
+        <Canvas.Clip>
+            <RectangleGeometry x:Name="OClip" Rect="0, 0, 1024, 77.5"/>
+        </Canvas.Clip>
+
+        <Canvas x:Name="InternalContainer" Height="77.5" Width="1024" RenderTransformOrigin="0.5,0.5" >
+            <!-- CONTENT CONTROLS -->
+
+            <!-- Video Player -->
+            <ProducerAlpha:VideoPlayer x:Name="OVideoPlayer" Canvas.Top="0" Canvas.Left="0"/>
+
+            <!-- Identity Bar -->
+            <ProducerAlpha:IdentityBar x:Name="OIdentityBar" 
+                                                           Canvas.Left="68" 
+                                                           Canvas.Top="0" 
+                                                           ShowName="{Binding Path=Title, Mode=OneWay}"
+                                                           ShowAuthor="{Binding Path=Credits.Producers, Mode=OneWay,  Converter={StaticResource BBToStringEnumerationProducerConverter}}"
+                                                           Opacity="{Binding Path=BottomBarDefaultOpacity, Mode=OneWay}"
+            >
+                <ProducerAlpha:IdentityBar.Background>
+                    <SolidColorBrush Color="{Binding Path=BottomBarDefaultColorUI, Mode=OneWay}" />
+                </ProducerAlpha:IdentityBar.Background>
+                <ProducerAlpha:IdentityBar.Foreground>
+                    <SolidColorBrush Color="{Binding Path=IdentityBarFontColorUI, Mode=OneWay}" />
+                </ProducerAlpha:IdentityBar.Foreground>
+            </ProducerAlpha:IdentityBar>
+
+
+            <!-- WSFL PlaceHolder -->
+            <Canvas x:Name="WSFLPlaceHolder" Height="77.5" Width="761" Canvas.Left="263" Canvas.Top="0" Opacity="{Binding Path=BottomBarDefaultOpacity, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
+                <Canvas.Background>
+                    <SolidColorBrush Color="{Binding Path=BottomBarDefaultColorUI, Mode=OneWay}"/>
+                </Canvas.Background>
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+            </Canvas>
+
+            <!-- END OF CONTENT CONTROLS -->
+
+            <!-- TOGGLE BUTTON CONTROL -->
+            <ToggleButton x:Name="chkAutoHide" Canvas.Left="1007" Canvas.Top="4" Style="{DynamicResource BottomBarAutoHideToggleButton}"/>
+            <!-- TOGGLE BUTTON CONTROL -->
+
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>                
+            </Canvas.RenderTransform>
+        </Canvas>
+        
+        <Canvas x:Name="AutoHideHotspot" Height="10" Width="1024" Canvas.Top="67.5" Background="#00550000" MouseEnter="AutoHideHotspot_MouseEnter">
+        </Canvas>
+        
+    </Canvas>
+
+</UserControl>

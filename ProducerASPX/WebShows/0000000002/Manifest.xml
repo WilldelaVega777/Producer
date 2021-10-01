@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebShowManifest  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Specs\WebShowSpec.xsd" 
+                  WebShowName="OC Register Webshow News" 
+                  WebShowAuthor="Carl Carpenter" 
+                  WebShowDate="10/14/2008" 
+                  WebShowVersion="1.0" 
+                  InitialVideoWindowX="760" 
+                  InitialVideoWindowY="17" 
+                  InitialVideoWindowWidth="140" 
+                  InitialVideoWindowHeight="160" 
+                  InitialVideoWindowSource="/WebShows/0000000002/Resources/WebShowVideo.wmv" 
+                  BasePath="/WebShows/0000000002/" 
+                  BottomBarDefaultColor="#cc000000"
+                  BottomBarDefaultOpacity=".4">
+	<WebSlides>
+
+    <WebSlide>
+      <Thumbnail FrameID="001" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Welcome"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide1.jpg"/>        
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="002" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="The scene"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide2.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+			<Thumbnail FrameID="003" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="The evidence"/>
+			<Assets>
+        <Asset ID="OMovingBackground" Value="Webslide3.jpg"/>
+      </Assets>
+		</WebSlide>
+	
+		<WebSlide>
+			<Thumbnail FrameID="004" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Arrest"/>
+			<Assets>
+        <Asset ID="OMovingBackground" Value="Webslide4.jpg"/>
+      </Assets>
+		</WebSlide>    
+      
+		<WebSlide>
+			<Thumbnail FrameID="005" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Investigation"/>
+			<Assets>
+        <Asset ID="OMovingBackground" Value="Webslide5.jpg"/>
+      </Assets>
+		</WebSlide>
+	
+		<WebSlide>
+			<Thumbnail FrameID="006" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Article"/>
+			<Assets>
+        <Asset ID="OMovingBackground" Value="Webslide6.jpg"/>
+      </Assets>
+      <PageLink Url="http://www.ocregister.com/articles/girl-palma-martinez-2177219-vehicle-intersection" InitialButtonDelayTime="00:00:04" Top="376" Left="-26" />
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="007" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Double tragedy"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide7.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+     <Thumbnail FrameID="008" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Car show"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide8.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="009" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Infinity"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide9.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="010" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Clean diesel"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide10.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="011" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Hybrids"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide11.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="012" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Audi"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide12.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+			<Thumbnail FrameID="013" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Tiguan"/>
+			<Assets>
+        <Asset ID="OMovingBackground" Value="Webslide13.jpg"/>
+      </Assets>
+		</WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="014" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Solstice"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide14.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="015" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Rolls"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide15.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="016" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Big fan"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide16.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="017" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Bay"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide17.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="018" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Youkilis"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide18.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="019" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Home run"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide19.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="020" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Garret scores"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide20.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="021" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Lackey"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide21.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="022" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Relieved"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide22.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="023" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Lowrie scores"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide23.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="024" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Fenway"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide24.jpg"/>
+      </Assets>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="025" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Poll"/>
+      <Assets>
+        <Asset ID="OBackground" Value="Webslide25.jpg"/>
+      </Assets>
+      <ConversationalPoll DefaultFontSize="18" EndMessage="Thanks!" DefaultQuestionMargin="300" DefaultAnswerMargin="90">
+        <Questions>
+          <Question Id="1">
+            <QuestionTexts>
+              <QuestionText Text="What’s the single most important thing the Angels need to change before Game 2?" Order="1"></QuestionText>
+            </QuestionTexts>
+            <Answers>
+              <Answer Id="1" Text="Generate some offensive firepower"></Answer>
+              <Answer Id="2" Text="Shake up the lineup"></Answer>
+              <Answer Id="3" Text="Go to the bullpen faster"></Answer>
+              <Answer Id="4" Text="Run more"></Answer>
+              <Answer Id="5" Text="Argue more with the umpires"></Answer>
+              <Answer Id="6" Text="Play someone other than Boston"></Answer>
+            </Answers>
+          </Question>
+        </Questions>
+      </ConversationalPoll>
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="026" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Angels article"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide26.jpg"/>
+      </Assets>
+      <PageLink Url="http://www.ocregister.com/articles/third-angels-one-2176958-game-base" InitialButtonDelayTime="00:00:02" Top="376" Left="-26" />
+    </WebSlide>
+
+    <WebSlide>
+      <Thumbnail FrameID="027" ImageSource="/WebShows/0000000002/Resources/Thumbnails/Default.jpg" FrameText="Close"/>
+      <Assets>
+        <Asset ID="OMovingBackground" Value="Webslide27.jpg"/>
+      </Assets>
+    </WebSlide>
+
+  </WebSlides>
+</WebShowManifest>

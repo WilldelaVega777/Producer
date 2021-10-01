@@ -1,0 +1,280 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ProducerAlpha="clr-namespace:ProducerAlpha">
+
+	<DataTemplate x:Key="ScriptEntriesTemplate" >
+        <DataTemplate.Resources>
+            <ResourceDictionary>
+                <ProducerAlpha:ExistsTextToBooleanConverter x:Key="ExistsTextToBooleanConverter"/>
+            </ResourceDictionary>
+        </DataTemplate.Resources>
+
+        <Expander x:Name="ScriptItemExpander" Style="{DynamicResource SecondLevelExpander}" IsExpanded="True" ExpandDirection="Down" Height="Auto" Width="Auto">
+            <Expander.Header>
+                <Grid x:Name="HeaderGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="24"/>
+                        <ColumnDefinition Width="0"/>
+                        <ColumnDefinition Width="18"/>                        
+                        <ColumnDefinition Width="14"/>                        
+                        <ColumnDefinition Width="22"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.Resources>
+                        <Storyboard x:Key="imgTypeFadeIn">
+                            <DoubleAnimation  
+                                Storyboard.TargetName="imgFrameType"  
+                                Storyboard.TargetProperty="(Image.Opacity)"  
+                                From="0"  
+                                To=".5"  
+                                Duration="0:0:0.25" 
+                            />
+                        </Storyboard>
+
+                        <Storyboard x:Key="imgTypeFadeOut">
+                            <DoubleAnimation  
+                                Storyboard.TargetName="imgFrameType"  
+                                Storyboard.TargetProperty="(Image.Opacity)"  
+                                From=".5"  
+                                To="0"  
+                                Duration="0:0:0.3"
+                            />
+                        </Storyboard>
+                    </Grid.Resources>
+
+                    <TextBlock Grid.Column="0" Text="{Binding Path=Script.UITitle}"/>
+                    
+                    <ToggleButton x:Name="togglePreview" IsChecked="{Binding Path=RenderPreview}" Grid.Column="2" ToolTip="Include in Preview" Style="{DynamicResource PreviewToggleButton}" Height="21" Width="24"/>
+                    <ToggleButton x:Name="toggleLock"    IsChecked="{Binding Path=LockFrame}" Grid.Column="4" ToolTip="Lock Frame" Style="{DynamicResource LockToggleButton}"    Height="21" Width="24"/>
+                    <Image        x:Name="imgFrameType"  Grid.Column="6" ToolTip="Webslide" Source="/Assets/Icons/ScriptItemDataTemplate/FrameTypes/VideoFrameIcon.png" VerticalAlignment="Center" Height="19" Width="22" Opacity="0" Margin="0,0,0,0"/>
+                    
+                </Grid>
+            </Expander.Header>
+
+            <Grid Width="330" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="84"/>
+					<RowDefinition Height="98"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="144"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border BorderBrush="Black" Width="130" Height="75" BorderThickness="1" Margin="5,0,0,0">
+                        <Image Source="{Binding Path=Script.ImageUrl}" Width="130" Height="75" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="0"/>
+                    </Border>
+                    
+					<Canvas Grid.Column="1" Margin="0,0,0,0" Width="188" Height="75" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                        <ProducerAlpha:ThreeStateToggleButton IsMarked="{Binding Script.ExpanderForAnimationText, Converter={StaticResource ExistsTextToBooleanConverter}, Mode=OneWay}" ToolTip="{Binding Script.ExpanderForAnimationText, Mode=OneWay}" Canvas.Top="0" Canvas.Left="0" Width="100" Height="26" FontSize="14" x:Name="cmdAnimation" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock FontSize="10" Text="Animation"/>
+                            <ToggleButton.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="0.90" ScaleY="0.90"/>
+                                    <SkewTransform AngleX="0" AngleY="0"/>
+                                    <RotateTransform Angle="0"/>
+                                    <TranslateTransform X="0" Y="0"/>
+                                </TransformGroup>
+                            </ToggleButton.RenderTransform>
+                        </ProducerAlpha:ThreeStateToggleButton>
+
+
+                        <ProducerAlpha:ThreeStateToggleButton IsMarked="{Binding Script.ExpanderForOverlaysText, Converter={StaticResource ExistsTextToBooleanConverter}, Mode=OneWay}" ToolTip="{Binding Script.ExpanderForOverlaysText, Mode=OneWay}" Style="{DynamicResource ScriptPaneToggleButton}" Canvas.Top="24" Canvas.Left="0" Width="100" Height="26" FontSize="14" x:Name="cmdOverlays" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock FontSize="10" Text="Overlays"/>
+                            <ToggleButton.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="0.90" ScaleY="0.90"/>
+                                    <SkewTransform AngleX="0" AngleY="0"/>
+                                    <RotateTransform Angle="0"/>
+                                    <TranslateTransform X="0" Y="0"/>
+                                </TransformGroup>
+                            </ToggleButton.RenderTransform>
+                        </ProducerAlpha:ThreeStateToggleButton>
+
+
+                        <ProducerAlpha:ThreeStateToggleButton IsMarked="{Binding Script.ExpanderForControlsText, Converter={StaticResource ExistsTextToBooleanConverter}, Mode=OneWay}" ToolTip="{Binding Script.ExpanderForControlsText, Mode=OneWay}" Style="{DynamicResource ScriptPaneToggleButton}" Canvas.Top="48" Canvas.Left="0" Width="100" Height="26" FontSize="14" x:Name="cmdControls" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock FontSize="10" Text="Controls"/>
+                            <ToggleButton.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="0.90" ScaleY="0.90"/>
+                                    <SkewTransform AngleX="0" AngleY="0"/>
+                                    <RotateTransform Angle="0"/>
+                                    <TranslateTransform X="0" Y="0"/>
+                                </TransformGroup>
+                            </ToggleButton.RenderTransform>
+                        </ProducerAlpha:ThreeStateToggleButton>
+
+
+                        <ProducerAlpha:ThreeStateToggleButton IsMarked="{Binding Script.ExpanderForImageText, Converter={StaticResource ExistsTextToBooleanConverter}, Mode=OneWay}" ToolTip="{Binding Script.ExpanderForImageText, Mode=OneWay}" Style="{DynamicResource ScriptPaneToggleButton}" Canvas.Top="0" Canvas.Left="89" Width="100" Height="26" FontSize="14" x:Name="cmdImage" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock FontSize="10" Text="Image"/>
+                            <ToggleButton.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="0.90" ScaleY="0.90"/>
+                                    <SkewTransform AngleX="0" AngleY="0"/>
+                                    <RotateTransform Angle="0"/>
+                                    <TranslateTransform X="0" Y="0"/>
+                                </TransformGroup>
+                            </ToggleButton.RenderTransform>
+                        </ProducerAlpha:ThreeStateToggleButton>
+
+
+                        <ProducerAlpha:ThreeStateToggleButton IsMarked="{Binding Script.ExpanderForSoundtrackText, Converter={StaticResource ExistsTextToBooleanConverter}, Mode=OneWay}" ToolTip="{Binding Script.ExpanderForSoundtrackText, Mode=OneWay}" Style="{DynamicResource ScriptPaneToggleButton}" Canvas.Top="24" Canvas.Left="89" Width="100" Height="26" FontSize="14" x:Name="cmdSoundtrack" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock FontSize="10" Text="Soundtrack"/>
+                            <ToggleButton.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="0.90" ScaleY="0.90"/>
+                                    <SkewTransform AngleX="0" AngleY="0"/>
+                                    <RotateTransform Angle="0"/>
+                                    <TranslateTransform X="0" Y="0"/>
+                                </TransformGroup>
+                            </ToggleButton.RenderTransform>
+                        </ProducerAlpha:ThreeStateToggleButton>
+
+
+                        <ProducerAlpha:ThreeStateToggleButton IsMarked="{Binding Script.ExpanderForVideoText, Converter={StaticResource ExistsTextToBooleanConverter}, Mode=OneWay}" ToolTip="{Binding Script.ExpanderForVideoText, Mode=OneWay}" Style="{DynamicResource ScriptPaneToggleButton}" Canvas.Top="48" Canvas.Left="89" Width="100" Height="26" FontSize="14" x:Name="cmdVideo" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock FontSize="10" Text="Video"/>
+                            <ToggleButton.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="0.90" ScaleY="0.90"/>
+                                    <SkewTransform AngleX="0" AngleY="0"/>
+                                    <RotateTransform Angle="0"/>
+                                    <TranslateTransform X="0" Y="0"/>
+                                </TransformGroup>
+                            </ToggleButton.RenderTransform>
+                        </ProducerAlpha:ThreeStateToggleButton>
+
+                    </Canvas>
+				</Grid>
+
+                <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <ToolBar Grid.Row="0" Height="30" Width="398">
+                        <ToggleButton MinWidth="30" Command="EditingCommands.ToggleBold" CommandTarget="{Binding ElementName=ORTEditor}" TextBlock.Foreground="White" TextBlock.FontSize="11" TextBlock.FontWeight="Bold">B</ToggleButton>
+                        <ToggleButton MinWidth="30" Command="EditingCommands.ToggleItalic" CommandTarget="{Binding ElementName=ORTEditor}" TextBlock.Foreground="White" TextBlock.FontSize="11" TextBlock.FontStyle="Italic">I</ToggleButton>
+                        <ToggleButton MinWidth="30" Command="EditingCommands.ToggleUnderline" CommandTarget="{Binding ElementName=ORTEditor}"><TextBlock Style="{DynamicResource DefaultTextBlock}" TextDecorations="Underline">U</TextBlock></ToggleButton>
+
+                        <Button MinWidth="30" Height="23" Command="EditingCommands.IncreaseFontSize" CommandTarget="{Binding ElementName=ORTEditor}">
+                            <Polygon  x:Name="ArrowUp"
+		                          Canvas.ZIndex="2"
+		                          Canvas.Left="12"
+		                          Canvas.Top="9"
+		                          Stroke="{DynamicResource ExpanderToggleButtonNormalSecondBorderBrush}" 
+		                          Fill="{DynamicResource ExpanderToggleButtonNormalSecondBorderBrush}"
+		                          StrokeThickness="2" 
+		                          HorizontalAlignment="Center" 
+		                          VerticalAlignment="Center"
+                                  RenderTransformOrigin="0.5,0.5"
+	                        >
+                                <Polygon.Points>
+                                    <Point X="0" Y="4" />
+                                    <Point X="2" Y="0" />
+                                    <Point X="4" Y="4" />
+                                </Polygon.Points>
+
+                                <Polygon.RenderTransform>
+                                    <RotateTransform Angle="0"/>
+                                </Polygon.RenderTransform>
+                            </Polygon>
+                        </Button>
+
+                        <Button MinWidth="30" Height="23" Command="EditingCommands.DecreaseFontSize" CommandTarget="{Binding ElementName=ORTEditor}">
+                            <Polygon  x:Name="ArrowDown"
+		                          Canvas.ZIndex="2"
+		                          Canvas.Left="12"
+		                          Canvas.Top="9"
+		                          Stroke="{DynamicResource ExpanderToggleButtonNormalSecondBorderBrush}" 
+		                          Fill="{DynamicResource ExpanderToggleButtonNormalSecondBorderBrush}"
+		                          StrokeThickness="2" 
+		                          HorizontalAlignment="Center" 
+		                          VerticalAlignment="Center"
+                                  RenderTransformOrigin="0.5,0.5"
+	                        >
+                                <Polygon.Points>
+                                    <Point X="0" Y="4" />
+                                    <Point X="2" Y="0" />
+                                    <Point X="4" Y="4" />
+                                </Polygon.Points>
+
+                                <Polygon.RenderTransform>
+                                    <RotateTransform Angle="180"/>
+                                </Polygon.RenderTransform>
+                            </Polygon>
+                        </Button>
+
+
+                        <ToolBar.LayoutTransform>
+                            <ScaleTransform ScaleX=".85" ScaleY=".85"/>
+                        </ToolBar.LayoutTransform>
+                    </ToolBar>
+
+                    <RichTextBox x:Name="ORTEditor" Grid.Row="1" IsReadOnly="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="65" VerticalScrollBarVisibility="Visible" Margin="2,3,2,0"/>
+                    <ProducerAlpha:DataBindingProxy In="{Binding Path=Script.ScriptText}" Out="{Binding ElementName=ORTEditor, Path=Document}" />
+                </Grid>
+                
+                <!-- Extended Item Section -->
+				<Expander x:Name="OExtendedItemExpander" Margin="-1,0,-1,0" Grid.Row="2" Grid.ColumnSpan="2" Style="{DynamicResource PanelExpander}" Header="" IsExpanded="False" ExpandDirection="Down" Height="Auto" Width="Auto">
+					<Grid Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+						<Grid.RowDefinitions>
+							<RowDefinition />
+							<RowDefinition />
+							<RowDefinition />
+							<RowDefinition />
+							<RowDefinition />
+							<RowDefinition />
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
+						
+						<Expander x:Name="ExpanderForAnimation" Style="{DynamicResource SecondLevelExpander}" Header="Animation" IsExpanded="False" ExpandDirection="Down" Height="Auto" Width="Auto" Grid.Row="0">
+							<TextBox x:Name="txtAnimation" Text="{Binding Script.ExpanderForAnimationText, UpdateSourceTrigger=PropertyChanged}" Width="Auto" Height="40" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap" Margin="4,5,4,5"/>
+						</Expander>
+						
+						<Expander x:Name="ExpanderForOverlays" Style="{DynamicResource SecondLevelExpander}" Header="Overlays" IsExpanded="False" ExpandDirection="Down" Height="Auto" Width="Auto" Grid.Row="1">
+							<TextBox x:Name="txtOverlays" Text="{Binding Script.ExpanderForOverlaysText, UpdateSourceTrigger=PropertyChanged}" Width="Auto" Height="40" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap" Margin="4,5,4,5"/>
+						</Expander>
+												
+						<Expander x:Name="ExpanderForVideo" Style="{DynamicResource SecondLevelExpander}" Header="Video" IsExpanded="False" ExpandDirection="Down" Height="Auto" Width="Auto" Grid.Row="2">
+							<TextBox x:Name="txtVideo" Text="{Binding Script.ExpanderForVideoText, UpdateSourceTrigger=PropertyChanged}"  Width="Auto" Height="40" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap" Margin="4,5,4,5"/>
+						</Expander>
+												
+						<Expander x:Name="ExpanderForControls" Style="{DynamicResource SecondLevelExpander}" Header="Controls" IsExpanded="False" ExpandDirection="Down" Height="Auto" Width="Auto" Grid.Row="3">
+							<TextBox x:Name="txtControls" Text="{Binding Script.ExpanderForControlsText, UpdateSourceTrigger=PropertyChanged}" Width="Auto" Height="40" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap" Margin="4,5,4,5"/>
+						</Expander>
+												
+						<Expander x:Name="ExpanderForSoundtrack" Style="{DynamicResource SecondLevelExpander}" Header="Soundtrack" IsExpanded="False" ExpandDirection="Down" Height="Auto" Width="Auto" Grid.Row="4">
+							<TextBox x:Name="txtSoundtrack" Text="{Binding Script.ExpanderForSoundtrackText, UpdateSourceTrigger=PropertyChanged}"  Width="Auto" Height="40" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap" Margin="4,5,4,5"/>
+						</Expander>
+												
+						<Expander x:Name="ExpanderForImage" Style="{DynamicResource SecondLevelExpander}" Header="Image" IsExpanded="False" ExpandDirection="Down" Height="Auto" Width="Auto" Grid.Row="5">
+							<TextBox x:Name="txtImage" Text="{Binding Script.ExpanderForImageText, UpdateSourceTrigger=PropertyChanged}"  Width="Auto" Height="40" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap" Margin="4,5,4,5"/>
+						</Expander>						
+						
+					</Grid>
+				</Expander>
+
+            </Grid>
+		</Expander>
+    </DataTemplate>	
+	
+</ResourceDictionary>

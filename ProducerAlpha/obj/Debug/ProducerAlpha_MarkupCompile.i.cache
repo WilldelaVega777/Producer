@@ -1,0 +1,20 @@
+﻿ProducerAlpha
+
+
+winexe
+C#
+.cs
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\obj\Debug\
+ProducerAlpha
+none
+false
+DEBUG;TRACE
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerAlpha\App.xaml
+52-753259912
+1-1887574753
+103-1197975363
+262085337214
+Components\BottomBar\BottomBar.xaml;Components\CircularProgressBar\CircularProgressBar.xaml;Components\ErrorReporter\ErrorReporter.xaml;Components\IdentityBar\IdentityBar.xaml;Components\NewDialog\NewDialog.xaml;Components\VideoPlayer\VideoPlayer.xaml;Components\WaitForPublishDialog\WaitForPublishDialog.xaml;Components\WebChannelSelector\WebChannelSelector.xaml;Components\Welcome\Welcome.xaml;DataTemplates\ScriptPanelDataTemplate.xaml;frmMain.xaml;Skins\Expressive.xaml;Skins\Expressive\Controls\Button.xaml;Skins\Expressive\Controls\CheckBox.xaml;Skins\Expressive\Controls\ComboBox.xaml;Skins\Expressive\Controls\ContextMenu.xaml;Skins\Expressive\Controls\Custom.xaml;Skins\Expressive\Controls\Custom\DropdownButton.xaml;Skins\Expressive\Controls\Custom\ThreeStateToggleButton.xaml;Skins\Expressive\Controls\Expander.xaml;Skins\Expressive\Controls\GridSplitter.xaml;Skins\Expressive\Controls\GroupBox.xaml;Skins\Expressive\Controls\Label.xaml;Skins\Expressive\Controls\ListBox.xaml;Skins\Expressive\Controls\ListView.xaml;Skins\Expressive\Controls\Menu.xaml;Skins\Expressive\Controls\PasswordBox.xaml;Skins\Expressive\Controls\ProgressBar.xaml;Skins\Expressive\Controls\RadioButton.xaml;Skins\Expressive\Controls\RichTextBox.xaml;Skins\Expressive\Controls\ScrollBar.xaml;Skins\Expressive\Controls\Slider.xaml;Skins\Expressive\Controls\StatusBar.xaml;Skins\Expressive\Controls\TabControl.xaml;Skins\Expressive\Controls\TextBlock.xaml;Skins\Expressive\Controls\TextBox.xaml;Skins\Expressive\Controls\ToggleButton.xaml;Skins\Expressive\Controls\Toolbar.xaml;Skins\Expressive\Controls\Toolbar\ToolbarButton.xaml;Skins\Expressive\Controls\Toolbar\ToolbarCheckBox.xaml;Skins\Expressive\Controls\Toolbar\ToolbarComboBox.xaml;Skins\Expressive\Controls\Toolbar\ToolbarRadioButton.xaml;Skins\Expressive\Controls\Toolbar\ToolbarTextBox.xaml;Skins\Expressive\Controls\Toolbar\ToolbarToggleButton.xaml;Skins\Expressive\Controls\ToolTip.xaml;Skins\Expressive\Controls\TreeView.xaml;Skins\Expressive\ExpressiveControls.xaml;Skins\Expressive\ExpressiveResources.xaml;Skins\Expressive\Resources\Brushes.xaml;Skins\Expressive\Resources\GeneralStyles.xaml;Startup.xaml;Temporal Tests\Temp.xaml;
+
+False
+

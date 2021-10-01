@@ -1,0 +1,19 @@
+﻿<Application
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="ProducerAlpha.App"	
+	StartupUri="frmMain.xaml">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        
+        <!-- Default Skin -->
+        <ResourceDictionary Source="Skins\Expressive.xaml"/>		
+
+        <!-- Data Templates -->	
+        <ResourceDictionary Source="DataTemplates\ScriptPanelDataTemplate.xaml"/>
+		
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

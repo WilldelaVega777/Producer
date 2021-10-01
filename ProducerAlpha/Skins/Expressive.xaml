@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!--
+  REUXABLES THEMES
+  
+  Copyright (C) 2007-2008 Nukeation Studios. All rights reserved.
+  
+  This file is protected by the End-User License Agreement provided at:
+  http://reuxables.nukeation.com/files/license.txt
+  
+  THIS FILE MUST BE COMPILED WITH YOUR EXECUTABLE / ASSEMBLY BEFORE BEING DISTRIBUTED
+  THIS NOTICE MUST REMAIN INTACT. DO NOT REMOVE!
+    
+  MODIFICATIONS, NEW STRUCTURE AND GENERAL SKIN CHANGES PROVIDED BY WILLIAM VEGA.
+
+  -->
+
+
+    <ResourceDictionary.MergedDictionaries>
+            
+            <!-- Skin Main Elements -->
+            <ResourceDictionary Source="Expressive\ExpressiveResources.xaml"/>
+            <ResourceDictionary Source="Expressive\ExpressiveControls.xaml"/>
+
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

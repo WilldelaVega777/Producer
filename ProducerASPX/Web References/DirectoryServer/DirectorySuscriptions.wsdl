@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://wayv.tv/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://wayv.tv/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://wayv.tv/">
+      <s:element name="ListWebChannels">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListWebChannelsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListWebChannelsResult" type="tns:ArrayOfWebChannelInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWebChannelInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WebChannelInfo" nillable="true" type="tns:WebChannelInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WebChannelInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ChannelId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChannelName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChannelDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChannelImage" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChannelLogo" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetNewShowID">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetNewShowIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetNewShowIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewVersionID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pShowId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewVersionIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetNewVersionIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSessionID">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSessionIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSessionIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitShow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pMetadata" type="tns:WebShowMetadata" />
+            <s:element minOccurs="0" maxOccurs="1" name="pZipPackage" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebShowMetadata">
+        <s:attribute name="ShowId" type="s:int" use="required" />
+        <s:attribute name="Version" type="s:int" use="required" />
+        <s:attribute name="ShowTitle" type="s:string" />
+        <s:attribute name="Description" type="s:string" />
+        <s:attribute name="ChannelId" type="s:int" use="required" />
+      </s:complexType>
+      <s:element name="SubmitShowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitShowResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListWebChannelsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListWebChannels" />
+  </wsdl:message>
+  <wsdl:message name="ListWebChannelsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListWebChannelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewShowIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewShowID" />
+  </wsdl:message>
+  <wsdl:message name="GetNewShowIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewShowIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewVersionIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewVersionID" />
+  </wsdl:message>
+  <wsdl:message name="GetNewVersionIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewVersionIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSessionID" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSessionIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitShowSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitShow" />
+  </wsdl:message>
+  <wsdl:message name="SubmitShowSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitShowResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DirectorySuscriptionsSoap">
+    <wsdl:operation name="ListWebChannels">
+      <wsdl:input message="tns:ListWebChannelsSoapIn" />
+      <wsdl:output message="tns:ListWebChannelsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewShowID">
+      <wsdl:input message="tns:GetNewShowIDSoapIn" />
+      <wsdl:output message="tns:GetNewShowIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewVersionID">
+      <wsdl:input message="tns:GetNewVersionIDSoapIn" />
+      <wsdl:output message="tns:GetNewVersionIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionID">
+      <wsdl:input message="tns:GetSessionIDSoapIn" />
+      <wsdl:output message="tns:GetSessionIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitShow">
+      <wsdl:input message="tns:SubmitShowSoapIn" />
+      <wsdl:output message="tns:SubmitShowSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DirectorySuscriptionsSoap" type="tns:DirectorySuscriptionsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListWebChannels">
+      <soap:operation soapAction="http://wayv.tv/ListWebChannels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewShowID">
+      <soap:operation soapAction="http://wayv.tv/GetNewShowID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewVersionID">
+      <soap:operation soapAction="http://wayv.tv/GetNewVersionID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionID">
+      <soap:operation soapAction="http://wayv.tv/GetSessionID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitShow">
+      <soap:operation soapAction="http://wayv.tv/SubmitShow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DirectorySuscriptionsSoap12" type="tns:DirectorySuscriptionsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListWebChannels">
+      <soap12:operation soapAction="http://wayv.tv/ListWebChannels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewShowID">
+      <soap12:operation soapAction="http://wayv.tv/GetNewShowID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewVersionID">
+      <soap12:operation soapAction="http://wayv.tv/GetNewVersionID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionID">
+      <soap12:operation soapAction="http://wayv.tv/GetSessionID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitShow">
+      <soap12:operation soapAction="http://wayv.tv/SubmitShow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DirectorySuscriptions">
+    <wsdl:port name="DirectorySuscriptionsSoap" binding="tns:DirectorySuscriptionsSoap">
+      <soap:address location="http://localhost/WebServices/DirectorySuscriptions.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DirectorySuscriptionsSoap12" binding="tns:DirectorySuscriptionsSoap12">
+      <soap12:address location="http://localhost/WebServices/DirectorySuscriptions.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

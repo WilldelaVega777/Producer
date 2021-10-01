@@ -1,0 +1,32 @@
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\Assets\Fonts\WayvFonts.zip
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\WayvSL2ASPX.dll
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\WayvSL2ASPX.pdb
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\Ionic.Zip.dll
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\de\System.Web.Silverlight.resources.dll
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\es\System.Web.Silverlight.resources.dll
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\fr\System.Web.Silverlight.resources.dll
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\it\System.Web.Silverlight.resources.dll
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\ja\System.Web.Silverlight.resources.dll
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\ko\System.Web.Silverlight.resources.dll
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\zh-Hans\System.Web.Silverlight.resources.dll
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\bin\zh-Hant\System.Web.Silverlight.resources.dll
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\obj\Debug\ResolveAssemblyReference.cache
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\obj\Debug\WayvSL2ASPX.dll
+I:\Users\SilverlightDeveloper\Documents\Visual Studio 2010\Projects\ProducerServer\ProducerASPX\obj\Debug\WayvSL2ASPX.pdb
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\Assets\Fonts\WayvFonts.zip
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\WayvSL2ASPX.dll.config
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\WayvSL2ASPX.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\WayvSL2ASPX.pdb
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\de\System.Web.Silverlight.resources.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\es\System.Web.Silverlight.resources.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\fr\System.Web.Silverlight.resources.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\it\System.Web.Silverlight.resources.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\ja\System.Web.Silverlight.resources.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\ko\System.Web.Silverlight.resources.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\zh-Hans\System.Web.Silverlight.resources.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\bin\zh-Hant\System.Web.Silverlight.resources.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\obj\Debug\ProducerASPX.csprojAssemblyReference.cache
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\obj\Debug\ProducerASPX.csproj.CoreCompileInputs.cache
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\obj\Debug\ProducerASPX.csproj.CopyComplete
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\obj\Debug\WayvSL2ASPX.dll
+E:\Proyectos\PRODUCTION\Wayv\Producer\ProducerASPX\obj\Debug\WayvSL2ASPX.pdb

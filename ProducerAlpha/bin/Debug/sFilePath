@@ -1,0 +1,15 @@
+The tag 'Canvas' does not exist in XML namespace 'http://schemas.microsoft.com/client/2007'. Line '1' Position '2'.
+
+
+StackTrace: CallStack:    at System.Windows.Markup.XamlParser.ThrowExceptionWithLine(String message, Int32 lineNumber, Int32 linePosition)
+   at System.Windows.Markup.XamlParser.ThrowException(String id, String value1, String value2, Int32 lineNumber, Int32 linePosition)
+   at System.Windows.Markup.XamlParser.WriteUnknownTagStart(XamlUnknownTagStartNode xamlUnknownTagStartNode)
+   at System.Windows.Markup.XamlParser.ProcessXamlNode(XamlNode xamlNode, Boolean& cleanup, Boolean& done)
+   at System.Windows.Markup.XamlParser.ReadXaml(Boolean singleRecordMode)
+   at System.Windows.Markup.TreeBuilderXamlTranslator._Parse()
+   at System.Windows.Markup.XamlParser.Parse()
+   at System.Windows.Markup.XamlTreeBuilder.ParseFragment()
+   at System.Windows.Markup.TreeBuilder.Parse()
+   at System.Windows.Markup.XamlReader.XmlTreeBuildDefault(ParserContext pc, XmlReader reader, Boolean wrapWithMarkupCompatReader, XamlParseMode parseMode, Boolean etwTracingEnabled)
+   at System.Windows.Markup.XamlReader.Load(XmlReader reader)
+   at ProducerAlpha.frmMain.LoadXamlAnimation() in C:\Users\William Vega\Documents\Visual Studio 2008\Projects\ProducerAlpha\ProducerAlpha\frmMain.xaml.cs:line 1818

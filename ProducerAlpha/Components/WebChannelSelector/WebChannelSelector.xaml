@@ -1,0 +1,152 @@
+﻿<UserControl 
+    x:Class="ProducerAlpha.WebChannelSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:ProducerAlpha="clr-namespace:ProducerAlpha"    
+    Height="500" 
+    Width="690"
+>
+
+        <UserControl.Resources>
+            <ProducerAlpha:ItemToBoolConverter x:Key="ItemToBoolConverter"/>
+        </UserControl.Resources>
+
+        <Grid x:Name="LayoutRoot" Width="Auto" Height="Auto" Background="#FF181818">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Dialog Background -->
+        <Image Margin="228,14.021,11,-1" Source="..\..\Assets\Bitmaps\NewDialog\WayvLogoForNewDialog.png" Opacity="0.095" x:Name="WayvLogoBackground" Grid.RowSpan="2" />
+
+        <!-- Dialog Title -->
+        <Grid Grid.Row="0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2E2E2E" Offset="0.524"/>
+                    <GradientStop Color="#FF4B4B4B" Offset="0.427"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.948*"/>
+                <ColumnDefinition Width="0.052*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" Margin="8,4,0,4" Width="112" TextWrapping="Wrap" Foreground="#FFFFFFFF" FontFamily="Tahoma" FontSize="11" FontWeight="Bold" Text="Select WebChannel"/>
+            <Button Style="{DynamicResource RedButton}" TabIndex="6" HorizontalAlignment="Center" Margin="0,2.5,0,4.5" Width="18" Height="19" Grid.Column="1" x:Name="cmdClose" BorderThickness="1,1,1,1" Background="#FF1F1F1F" Foreground="White" VerticalAlignment="Center" FontFamily="Arial Rounded MT" FontWeight="Bold" FontSize="11" Click="cmdCancel_Click">
+                <TextBlock Text="X" Margin="0,2,0,0" FontSize="11" Foreground="White" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+        </Grid>
+        <Border Grid.RowSpan="2" BorderThickness="1,1,1,1" BorderBrush="#CA535353" Grid.Column="1"/>
+
+        <!-- Dialog Content -->
+        <Canvas Grid.Row="1">
+
+            <!-- ListBox -->
+            <Grid Canvas.Top="15" Canvas.Left="15" Width="575" Height="440">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid.Resources>
+
+                    <Style x:Key="SelectWebChannelItemContainerStyle" TargetType ="ListViewItem">
+                        <Setter Property="Height" Value="154"/>
+                    </Style>
+
+                </Grid.Resources>
+
+
+                <ListView x:Name="lvSelectWebChannel"
+                          SelectionMode="Single"
+                          VirtualizingStackPanel.IsVirtualizing="True"
+                          IsSynchronizedWithCurrentItem="True"
+                          Grid.Row="0"
+                          Grid.Column="0"
+                          BorderBrush="Black"                                                       
+				>
+
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="False">
+                            <GridView.ColumnHeaderContainerStyle>
+                                <Style>
+                                    <Setter Property="FrameworkElement.Visibility" Value="Collapsed"/>
+                                </Style>
+                            </GridView.ColumnHeaderContainerStyle>
+                            
+                            <!-- Column 1: Channel Image  -->
+                            <GridViewColumn Header="Channel" Width="256">
+                                <GridViewColumn.CellTemplate >
+                                    <DataTemplate>
+                                        <Image x:Name="imgChannelImage" Opacity="0.7" Source="{Binding Path=WebChannelImage}" Width="256" Height="146" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn >
+
+                            <!-- Column 2: Channel Name/Description  -->
+                            <GridViewColumn Header="Description" Width="290">
+                                <GridViewColumn.CellTemplate >
+                                    <DataTemplate>
+
+                                        <Grid>
+                                            
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="50px"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" MaxWidth="270"/>
+                                            </Grid.ColumnDefinitions>
+
+
+                                            <TextBlock x:Name="tbChannelName" 
+                                                       Grid.Row="0" 
+                                                       FontSize="11" 
+                                                       FontWeight="Bold" 
+                                                       Text="{Binding Path=WebChannelName}" 
+                                                       HorizontalAlignment="Left" 
+                                                       Margin="0,20,0,0" 
+                                                       Foreground="#FFAAAAAA"
+                                            />
+                                            <TextBlock x:Name="tbChannelDescription" 
+                                                       Grid.Row="1"  
+                                                       VerticalAlignment="Top" 
+                                                       TextWrapping="Wrap" 
+                                                       FontSize="9" 
+                                                       Text="{Binding Path=WebChannelDescription}" 
+                                                       HorizontalAlignment="Left"
+                                                       Foreground="White"
+                                            />
+                                            
+                                        </Grid>
+                                        
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn >
+
+
+                        </GridView>
+                    </ListView.View>
+                </ListView >
+
+
+            </Grid>
+  
+            <!-- Action Buttons -->
+            <Button x:Name="cmdOk" TabIndex="4" Width="81" Height="21" HorizontalAlignment="Right" VerticalAlignment="Bottom" Canvas.Top="20" Canvas.Left="597" Click="cmdOk_Click" IsEnabled="{Binding ElementName=lvSelectWebChannel, Path=SelectedItem, Converter={StaticResource ItemToBoolConverter}}">
+                <TextBlock Text="{DynamicResource NewDialog_OK}" FontSize="11" Foreground="White" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            
+            <Button x:Name="cmdCancel" TabIndex="5" Width="81" Height="21" Canvas.Left="597" Canvas.Top="65" Click="cmdCancel_Click">
+                <TextBlock Text="{DynamicResource NewDialog_Cancel}" FontSize="11" Foreground="White" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+
+        </Canvas>
+        
+    </Grid>
+
+</UserControl>

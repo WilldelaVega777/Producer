@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutCommand" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AddNewConversationalPoll" xml:space="preserve">
+    <value>Add New Conversational Poll</value>
+  </data>
+  <data name="AddNewPageFrame" xml:space="preserve">
+    <value>Add New PageFrame</value>
+  </data>
+  <data name="AddNewPageShot" xml:space="preserve">
+    <value>Add New Pageshot</value>
+  </data>
+  <data name="AddNewVideoFrame" xml:space="preserve">
+    <value>Add New VideoFrame</value>
+  </data>
+  <data name="AddNewWebSlide" xml:space="preserve">
+    <value>Add New Webslide</value>
+  </data>
+  <data name="AnotherProjectInFolder" xml:space="preserve">
+    <value>Cannot Create Project</value>
+  </data>
+  <data name="AnotherProjectInFolderMessage" xml:space="preserve">
+    <value>Another project exists in this folder</value>
+  </data>
+  <data name="ChannelLogoTooLarge" xml:space="preserve">
+    <value>Action Cancelled</value>
+  </data>
+  <data name="ChannelLogoTooLargeMessage" xml:space="preserve">
+    <value>The image you are trying to import is too large for a Channel Logo</value>
+  </data>
+  <data name="ChannelLogoTooSmall" xml:space="preserve">
+    <value>Action Cancelled</value>
+  </data>
+  <data name="ChannelLogoTooSmallMessage" xml:space="preserve">
+    <value>The image you are trying to import is too small for a Channel Logo</value>
+  </data>
+  <data name="ClearConsoleCommand" xml:space="preserve">
+    <value>Clear All Console Contents</value>
+  </data>
+  <data name="ConversationalPoll" xml:space="preserve">
+    <value>Conversational Poll</value>
+  </data>
+  <data name="CreateXamlLink" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="CreateXamlLinkMessage1" xml:space="preserve">
+    <value>Do you want to create a Link to the original Xaml File?</value>
+  </data>
+  <data name="CreateXamlLinkMessage2" xml:space="preserve">
+    <value>You can delete or update the link at a later time.</value>
+  </data>
+  <data name="Credits_Composers" xml:space="preserve">
+    <value>Composers: </value>
+  </data>
+  <data name="Credits_Designers" xml:space="preserve">
+    <value>Designers: </value>
+  </data>
+  <data name="Credits_Developers" xml:space="preserve">
+    <value>Developers: </value>
+  </data>
+  <data name="Credits_Directors" xml:space="preserve">
+    <value>Directors: </value>
+  </data>
+  <data name="Credits_Producers" xml:space="preserve">
+    <value>Producers: </value>
+  </data>
+  <data name="Credits_Speakers" xml:space="preserve">
+    <value>Speakers: </value>
+  </data>
+  <data name="DeleteFrame" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="DeleteFrameMessage" xml:space="preserve">
+    <value>Do you really want to delete this Frame?</value>
+  </data>
+  <data name="ExportCommand" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="FrameIsNot16By9" xml:space="preserve">
+    <value>Action Cancelled</value>
+  </data>
+  <data name="FrameIsNot16By9Message_Part1" xml:space="preserve">
+    <value>The Height of the Image should be </value>
+  </data>
+  <data name="FrameIsNot16By9Message_Part2" xml:space="preserve">
+    <value>to have the 16:9 Aspect Ratio Required.</value>
+  </data>
+  <data name="FrameTooLarge" xml:space="preserve">
+    <value>Action Cancelled</value>
+  </data>
+  <data name="FrameTooLargeMessage" xml:space="preserve">
+    <value>The image you are trying to import is too large for a Frame Background</value>
+  </data>
+  <data name="FrameTooSmall" xml:space="preserve">
+    <value>Action Cancelled</value>
+  </data>
+  <data name="FrameTooSmallMessage" xml:space="preserve">
+    <value>The image you are trying to import is too small for a Frame Background</value>
+  </data>
+  <data name="HeaderExpanderForAnimation" xml:space="preserve">
+    <value>Animation</value>
+  </data>
+  <data name="HeaderExpanderForControls" xml:space="preserve">
+    <value>Controls</value>
+  </data>
+  <data name="HeaderExpanderForImage" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="HeaderExpanderForOverlays" xml:space="preserve">
+    <value>Overlays</value>
+  </data>
+  <data name="HeaderExpanderForSoundtrack" xml:space="preserve">
+    <value>Soundtrack</value>
+  </data>
+  <data name="HeaderExpanderForVideo" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="HeaderExpanderFrames" xml:space="preserve">
+    <value>Frames</value>
+  </data>
+  <data name="HeaderExpanderMetadata" xml:space="preserve">
+    <value>Metadata</value>
+  </data>
+  <data name="HeaderExpanderProperties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="HelpContentsCommand" xml:space="preserve">
+    <value>HelpContents</value>
+  </data>
+  <data name="ImportCommand" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="LoadXaml" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="LoadXamlMessage1" xml:space="preserve">
+    <value>If you load external Xaml you will discard any Image Background you may have added to this Frame.</value>
+  </data>
+  <data name="LoadXamlMessage2" xml:space="preserve">
+    <value>Do you still want to proceed?</value>
+  </data>
+  <data name="MenuOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="NewDialog_Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="NewDialog_Browse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="NewDialog_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="NewDialog_Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="NewDialog_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NewDialog_NewProject" xml:space="preserve">
+    <value>New Project</value>
+  </data>
+  <data name="NewDialog_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="NewDialog_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="NoOSBMain" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="NoOSBMainMessage" xml:space="preserve">
+    <value>There is no OSBMain Storyboard in this Frame, Animating will not be possible.</value>
+  </data>
+  <data name="NotSaved" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="NotSavedMessage" xml:space="preserve">
+    <value>Your current project is not Saved, Save Now?</value>
+  </data>
+  <data name="OpenningSameProject" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="OpenningSameProjectMessage" xml:space="preserve">
+    <value>You are attempting to open the current project!  Please close it and reopen it if this is what you intend</value>
+  </data>
+  <data name="PageFrame" xml:space="preserve">
+    <value>PageFrame</value>
+  </data>
+  <data name="PageShot" xml:space="preserve">
+    <value>Pageshot</value>
+  </data>
+  <data name="PreviewCommand" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="ProjectFolderExists" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ProjectFolderExistsMessage" xml:space="preserve">
+    <value>It seems like there is a project in the current location, please select another Project Name</value>
+  </data>
+  <data name="PublishCommand" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+  <data name="SaveConsoleCommand" xml:space="preserve">
+    <value>Save Console Log</value>
+  </data>
+  <data name="ScriptPanelDataTemplate_Animation" xml:space="preserve">
+    <value>Animation</value>
+  </data>
+  <data name="ScriptPanelDataTemplate_Controls" xml:space="preserve">
+    <value>Controls</value>
+  </data>
+  <data name="ScriptPanelDataTemplate_Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="ScriptPanelDataTemplate_Overlays" xml:space="preserve">
+    <value>Overlays</value>
+  </data>
+  <data name="ScriptPanelDataTemplate_Soundtrack" xml:space="preserve">
+    <value>Soundtrack</value>
+  </data>
+  <data name="ScriptPanelDataTemplate_Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="ShowProps_Synopsis" xml:space="preserve">
+    <value>Synopsis: </value>
+  </data>
+  <data name="ShowProps_Tags" xml:space="preserve">
+    <value>Tags: </value>
+  </data>
+  <data name="ShowProps_Title" xml:space="preserve">
+    <value>Title:  </value>
+  </data>
+  <data name="TabItemAnimate" xml:space="preserve">
+    <value>Animate</value>
+  </data>
+  <data name="TabItemConsole" xml:space="preserve">
+    <value>Console</value>
+  </data>
+  <data name="TabItemExternalLinks" xml:space="preserve">
+    <value>External Links</value>
+  </data>
+  <data name="TabItemInfo" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="TabItemParsingErrors" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="TabItemResolveLinks" xml:space="preserve">
+    <value>Resolve Links</value>
+  </data>
+  <data name="TabItemResourceLinks" xml:space="preserve">
+    <value>Resource Links</value>
+  </data>
+  <data name="TabItemScript" xml:space="preserve">
+    <value>Script</value>
+  </data>
+  <data name="TabItemShow" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="TabItemSubtitles" xml:space="preserve">
+    <value>Subtitles</value>
+  </data>
+  <data name="TabItemSyncLink" xml:space="preserve">
+    <value>SyncLink</value>
+  </data>
+  <data name="TabItemTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="TabItemXamlLinks" xml:space="preserve">
+    <value>Xaml Links</value>
+  </data>
+  <data name="ToolTipCollapse" xml:space="preserve">
+    <value>Collapse</value>
+  </data>
+  <data name="ToolTipControlPanePreviewButton" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="ToolTipControlPanePublishButton" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+  <data name="ToolTipControlPaneRunFrameAnimationButton" xml:space="preserve">
+    <value>Run Frame Animation</value>
+  </data>
+  <data name="ToolTipDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ToolTipExpand" xml:space="preserve">
+    <value>Expand</value>
+  </data>
+  <data name="ToolTipExportToTeleprompt" xml:space="preserve">
+    <value>Export toTeleprompt</value>
+  </data>
+  <data name="ToolTipFrameAnimatingIsOff" xml:space="preserve">
+    <value>Start Frame Animation</value>
+  </data>
+  <data name="ToolTipFrameAnimatingIsOn" xml:space="preserve">
+    <value>Pause Frame Animation</value>
+  </data>
+  <data name="ToolTipFrameAnimation" xml:space="preserve">
+    <value>Start Frame Animation</value>
+  </data>
+  <data name="ToolTipGoToSyncLink" xml:space="preserve">
+    <value>Navigate to SyncLink</value>
+  </data>
+  <data name="ToolTipIncludeInPreview" xml:space="preserve">
+    <value>Include in Preview</value>
+  </data>
+  <data name="ToolTipInsertChannelImage" xml:space="preserve">
+    <value>Insert/Change Channel Image</value>
+  </data>
+  <data name="ToolTipInsertChannelLogo" xml:space="preserve">
+    <value>Insert/Change Channel Logo</value>
+  </data>
+  <data name="ToolTipInsertImageBackground" xml:space="preserve">
+    <value>Insert Image Background</value>
+  </data>
+  <data name="ToolTipInsertMoreMenu" xml:space="preserve">
+    <value>Insert MoreMenu</value>
+  </data>
+  <data name="ToolTipInsertNVideo" xml:space="preserve">
+    <value>Insert/Change Main Narrative Video</value>
+  </data>
+  <data name="ToolTipInsertTextAnimation" xml:space="preserve">
+    <value>Insert Text Animation</value>
+  </data>
+  <data name="ToolTipInsertTintifier" xml:space="preserve">
+    <value>Insert Tintifier</value>
+  </data>
+  <data name="ToolTipInsertWatchClip" xml:space="preserve">
+    <value>Insert WatchClip</value>
+  </data>
+  <data name="ToolTipInsertXamlFromBlend" xml:space="preserve">
+    <value>Insert Xaml from Blend</value>
+  </data>
+  <data name="ToolTipInsertZoomPan" xml:space="preserve">
+    <value>Insert Zoom/Pan</value>
+  </data>
+  <data name="ToolTipLockFrame" xml:space="preserve">
+    <value>Lock Frame</value>
+  </data>
+  <data name="ToolTipMasterVolume" xml:space="preserve">
+    <value>Master Volume</value>
+  </data>
+  <data name="ToolTipMoveDown" xml:space="preserve">
+    <value>Move Down</value>
+  </data>
+  <data name="ToolTipMoveUp" xml:space="preserve">
+    <value>Move Up</value>
+  </data>
+  <data name="ToolTipMuteVideoIsOff" xml:space="preserve">
+    <value>Mute Video - Off</value>
+  </data>
+  <data name="ToolTipMuteVideoIsOn" xml:space="preserve">
+    <value>Mute Video - On</value>
+  </data>
+  <data name="ToolTipNewFrame" xml:space="preserve">
+    <value>New Frame</value>
+  </data>
+  <data name="ToolTipRecordingModeIsOff" xml:space="preserve">
+    <value>Recording mode is Off</value>
+  </data>
+  <data name="ToolTipRecordingModeIsOn" xml:space="preserve">
+    <value>Recording mode is On</value>
+  </data>
+  <data name="ToolTipToggleExpandMode" xml:space="preserve">
+    <value>Toggle Expand Mode</value>
+  </data>
+  <data name="ToolTipVideoFrame" xml:space="preserve">
+    <value>VideoFrame</value>
+  </data>
+  <data name="ToolTipZoomToExtents" xml:space="preserve">
+    <value>Zoom to Extents</value>
+  </data>
+  <data name="VideoFrame" xml:space="preserve">
+    <value>VideoFrame</value>
+  </data>
+  <data name="WebSlide" xml:space="preserve">
+    <value>Webslide</value>
+  </data>
+</root>

@@ -1,0 +1,183 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"                    
+>
+
+    <!-- ====================================================================================================================================== -->
+
+    <Style TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="#ff333333"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="AllowDrop" Value="true" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <Border BorderThickness=".8" Padding="1,1,1,1" CornerRadius="3,3,3,3" Background="#aa555555">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="#ba222222" />
+                            </Border.BorderBrush>
+                        </Border>
+                        
+                        <Border x:Name="Border" BorderThickness=".8" Padding="1,1,1,1" CornerRadius="3,3,3,3">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="#ba222222" />
+                            </Border.BorderBrush>
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost" Style="{DynamicResource NuclearScrollViewer}" />
+                        </Border>                        
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <SolidColorBrush Color="{DynamicResource WhiteColor}" />
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+
+    <!-- ====================================================================================================================================== -->
+    <Style x:Key="NewDialogTextBoxStyle" TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="#ff333333"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="AllowDrop" Value="true" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <Border x:Name="Border" BorderThickness=".8" Padding="1,1,1,1" CornerRadius="3,3,3,3">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="#ee444444"/>
+                            </Border.BorderBrush>
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost" Style="{DynamicResource NuclearScrollViewer}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <SolidColorBrush Color="{DynamicResource WhiteColor}" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ====================================================================================================================================== -->
+    <Style x:Key="NewDialogRegExTextBoxStyle" TargetType="{x:Type TextBox}">
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="AllowDrop" Value="true" />
+        <Setter Property="Background" Value="#ff333333"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <Border x:Name="Border" BorderThickness=".8" Padding="1,1,1,1" CornerRadius="3,3,3,3">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="#ee444444" />
+                            </Border.BorderBrush>
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost" Style="{DynamicResource NuclearScrollViewer}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <SolidColorBrush Color="{DynamicResource WhiteColor}" />
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="True">
+                <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <!-- ====================================================================================================================================== -->
+    <Style x:Key="PropertyGridDescriptionBox" TargetType="{x:Type TextBox}">
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="AllowDrop" Value="true" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <Border x:Name="Border" BorderThickness="0" Padding="1,1,1,1" CornerRadius="3,3,3,3">
+                            <Border.Background>
+                                <SolidColorBrush Color="#99222222"/>
+                            </Border.Background>
+                            <Border.BitmapEffect>
+                                <OuterGlowBitmapEffect GlowColor="{DynamicResource HoverColor}" Opacity="0" />
+                            </Border.BitmapEffect>
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="{DynamicResource BlackColor}" />
+                            </Border.BorderBrush>
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost" Style="{DynamicResource NuclearScrollViewer}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="BitmapEffect" TargetName="Border">
+                                <Setter.Value>
+                                    <OuterGlowBitmapEffect GlowColor="{DynamicResource HoverColor}" Opacity="0.9" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsFocused" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="BitmapEffect" TargetName="Border">
+                                <Setter.Value>
+                                    <OuterGlowBitmapEffect GlowColor="{DynamicResource HoverColor}" Opacity="0.5" />
+                                </Setter.Value>
+                            </Setter>
+                        </MultiTrigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border" />
+                            <Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <SolidColorBrush Color="{DynamicResource WhiteColor}" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

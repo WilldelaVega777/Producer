@@ -1,0 +1,91 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ProducerAlpha="clr-namespace:ProducerAlpha"
+	mc:Ignorable="d"
+	x:Class="ProducerAlpha.NewDialog"
+	x:Name="NewDialogControl"
+	d:DesignWidth="500" d:DesignHeight="200" Width="500" Height="200"
+    Loaded="NewDialogControl_Loaded">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ProducerAlpha:RegexValidationRule x:Key="RegexValidationRule"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Width="Auto" Height="Auto" Background="#FF181818">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+        <!-- Dialog Background -->
+        <Image Margin="228,14.021,11,-1" Source="..\..\Assets\Bitmaps\NewDialog\WayvLogoForNewDialog.png" Stretch="Fill" Opacity="0.095" x:Name="WayvLogoBackground" Grid.RowSpan="2" />
+
+        <!-- New Dialog Title -->
+        <Grid Grid.Column="1">
+			<Grid.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FF2E2E2E" Offset="0.524"/>
+					<GradientStop Color="#FF4B4B4B" Offset="0.427"/>
+				</LinearGradientBrush>
+			</Grid.Background>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.948*"/>
+				<ColumnDefinition Width="0.052*"/>
+			</Grid.ColumnDefinitions>
+			<TextBlock HorizontalAlignment="Left" Margin="8,4,0,4" Width="112" TextWrapping="Wrap" Foreground="#FFFFFFFF" FontFamily="Tahoma" FontSize="11" FontWeight="Bold" Text="{DynamicResource NewDialog_NewProject}"/>
+            <Button Style="{DynamicResource RedButton}" TabIndex="6" HorizontalAlignment="Center" Margin="0,2.5,0,4.5" Width="18" Height="19" Grid.Column="1" x:Name="cmdClose" BorderThickness="1,1,1,1" Background="#FF1F1F1F" Foreground="White" VerticalAlignment="Center" FontFamily="Arial Rounded MT" FontWeight="Bold" FontSize="11" Click="cmdClose_Click">
+                <TextBlock Text="X" Margin="0,2,0,0" FontSize="11" Foreground="White" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center"/>            
+            </Button>
+        </Grid>
+		<Border Grid.RowSpan="2" BorderThickness="1,1,1,1" BorderBrush="#CA535353" Grid.Column="1"/>
+		
+        <!-- New Dialog Content -->
+        <Canvas Grid.Row="1">
+            
+            <!-- Fields -->
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Height="16" TextWrapping="Wrap" TextAlignment="Right" Canvas.Top="20" Canvas.Left="3" Text="{DynamicResource NewDialog_Name}" FontFamily="Tahoma" FontSize="11" Foreground="#FFFFFFFF"/>
+            <TextBox x:Name="txtProjectName" Style="{DynamicResource NewDialogRegExTextBoxStyle}" Focusable="True" TabIndex="1" Height="22" Width="328" Canvas.Left="68" Canvas.Top="18" TextChanged="txtProjectName_TextChanged">
+                <TextBox.Text>
+                    <Binding Path=".ProjectName">
+                        <Binding.ValidationRules>
+                            <ProducerAlpha:RegexValidationRule
+                              x:Name="RegExValidation"
+                              ErrorMessage="Invalid Project Name"
+                              RegexOptions="IgnoreCase"
+                              />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Height="16" TextWrapping="Wrap" TextAlignment="Right" Canvas.Top="46" Canvas.Left="3" Text="{DynamicResource NewDialog_Location}" FontFamily="Tahoma" FontSize="11" Foreground="#FFFFFFFF"/>
+            <TextBox x:Name="txtLocation" Background="#99111111" Style="{DynamicResource NewDialogTextBoxStyle}" Focusable="False" Height="22" Width="328" Canvas.Top="44" Canvas.Left="68" IsReadOnly="True"/>            
+            <Button x:Name="cmdBrowse" TabIndex="2" Width="72" Height="22" Canvas.Left="402" Canvas.Top="44" Click="cmdBrowse_Click">
+                <TextBlock Text="{DynamicResource NewDialog_Browse}" FontSize="11" Foreground="White" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Height="16" TextWrapping="Wrap" TextAlignment="Right" Canvas.Left="3" Canvas.Top="72" Text="{DynamicResource NewDialog_Title}" FontFamily="Tahoma" FontSize="11" Foreground="#FFFFFFFF"/>
+            <TextBox x:Name="txtTitle" Text="{Binding Path=.ShowTitle}" Style="{DynamicResource NewDialogTextBoxStyle}" Background="#99111111" Focusable="True" TabIndex="3" Height="22" Width="328" Canvas.Top="70" Canvas.Left="68" TextChanged="txtTitle_TextChanged"/>
+
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Height="16" TextWrapping="Wrap" TextAlignment="Right" Canvas.Left="3" Canvas.Top="98" Text="{DynamicResource NewDialog_Author}" FontFamily="Tahoma" FontSize="11" Foreground="#FFFFFFFF"/>
+            <TextBox x:Name="txtAuthor" Style="{DynamicResource NewDialogTextBoxStyle}" Background="#99111111" Focusable="True" TabIndex="3" Height="22" Width="328" Canvas.Top="96" Canvas.Left="68" TextChanged="txtAuthor_TextChanged" />
+
+            <!-- Error Message -->
+            <TextBlock x:Name="ErrorMessage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="495" Height="15" TextWrapping="Wrap" TextAlignment="Left" Canvas.Left="0" Canvas.Top="130" Text="Error Message" FontFamily="Tahoma" FontSize="10" Foreground="Red" Margin="15,0,5,0" Visibility="Hidden"/>
+
+            <!-- Action Buttons -->
+            <Button x:Name="cmdOk" TabIndex="4" Width="81" Height="21" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Canvas.Top="144" Canvas.Left="315" Click="cmdOk_Click" IsEnabled="False">
+                <TextBlock Text="{DynamicResource NewDialog_OK}" FontSize="11" Foreground="White" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>            
+            <Button x:Name="cmdCancel" TabIndex="5" Width="81" Height="21" Canvas.Left="400" Canvas.Top="144" Click="cmdCancel_Click">
+                <TextBlock Text="{DynamicResource NewDialog_Cancel}" FontSize="11" Foreground="White" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            
+        </Canvas>
+	</Grid>
+</UserControl>

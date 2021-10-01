@@ -1,0 +1,629 @@
+﻿<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DefaultClrNameSpace>ProducerAlphaPrototype</DefaultClrNameSpace>
+    <AssemblyName>ProducerAlpha</AssemblyName>
+    <RootNamespace>ProducerAlpha</RootNamespace>
+    <AlwaysCompileMarkupFilesInSeparateDomain>false</AlwaysCompileMarkupFilesInSeparateDomain>
+    <ExpressionBlendCreationVersion>2.1.1111.0</ExpressionBlendCreationVersion>
+    <ProjectGuid>{547E7A2F-4450-4252-B31A-10ADA14D50CF}</ProjectGuid>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OutputType>WinExe</OutputType>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>134930CF19082DCB38B83A9E5357C7947A6BB07A</ManifestCertificateThumbprint>
+    <ManifestKeyFile>ProducerAlpha_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.1.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Web References\DirectoryServer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Reference Include="Ionic.Zip, Version=1.8.4.24, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Encoder, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Expression.Encoder.Types, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Expression.Encoder.Utilities, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="Mindscape.WpfPropertyGrid, Version=2.0.571.9838, Culture=neutral, PublicKeyToken=0f2f2e3bf9b0527c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Mindscape\WPF Property Grid 2.0\Bin\Mindscape.WpfPropertyGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Mindscape.WpfPropertyGrid.Design, Version=2.0.571.9838, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Mindscape\WPF Property Grid 2.0\Bin\Mindscape.WpfPropertyGrid.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Ookii.Dialogs.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c15020868fd6249, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\wvserver\file server\Public\Programs\PC\Development\Microsoft\Visual Studio 2008\Libraries\Ookii.Dialogs.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="policy.2.0.taglib-sharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\taglib-sharp-2.0.3.3-windows\Libraries\policy.2.0.taglib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TimelineController, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyncLinkApp\TimelineController\bin\Debug\TimelineController.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Wpf.SplitButton, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\wvserver\file server\Public\Programs\PC\Development\Microsoft\Visual Studio 2008\Libraries\Wpf.SplitButton.dll</HintPath>
+    </Reference>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Classes\Abstract\Observable.cs" />
+    <Compile Include="Classes\Business Objects\Contributors\Abstract\Contributor.cs" />
+    <Compile Include="Classes\Business Objects\Contributors\Abstract\Frame.cs" />
+    <Compile Include="Classes\Business Objects\Answer.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Business Objects\Asset.cs" />
+    <Compile Include="Classes\Business Objects\Contributors\Composer.cs" />
+    <Compile Include="Classes\Business Objects\Contributors\Designer.cs" />
+    <Compile Include="Classes\Business Objects\Contributors\Developer.cs" />
+    <Compile Include="Classes\Business Objects\Contributors\Director.cs" />
+    <Compile Include="Classes\Business Objects\Contributors\Producer.cs" />
+    <Compile Include="Classes\Business Objects\Contributors\Speaker.cs" />
+    <Compile Include="Classes\Business Objects\DesignTimeExtensions\DesignTimeShowHelper.cs" />
+    <Compile Include="Classes\Business Objects\DesignTimeExtensions\DesignTimeFrameHelper.cs" />
+    <Compile Include="Classes\Business Objects\DesignTimeExtensions\ImportedXamlInfo.cs" />
+    <Compile Include="Classes\Business Objects\Project.cs" />
+    <Compile Include="Classes\Business Objects\Settings.cs" />
+    <Compile Include="Classes\Business Objects\VOMarker.cs" />
+    <Compile Include="Classes\Business Objects\WebChannelInfo.cs" />
+    <Compile Include="Classes\Collections\Scripts.cs" />
+    <Compile Include="Classes\Business Objects\Script.cs" />
+    <Compile Include="Classes\Business Objects\Contributors\Abstract\Control.cs" />
+    <Compile Include="Classes\Business Objects\Frames\ConversationalPoll.cs" />
+    <Compile Include="Classes\Enums\enumAccordionStates.cs" />
+    <Compile Include="Classes\Enums\enumAssetTypes.cs" />
+    <Compile Include="Classes\Enums\enumContributorTypes.cs" />
+    <Compile Include="Classes\Exception\ExceptionSink.cs" />
+    <Compile Include="Classes\Interfaces\IAcceptsBackgroundImage.cs" />
+    <Compile Include="Classes\Business Objects\ShowMetadata.cs" />
+    <Compile Include="Classes\Utilities\Converters\FlowDocumentConverter.cs" />
+    <Compile Include="Classes\Utilities\EventArgs\ExceptionEventArgs.cs" />
+    <Compile Include="Classes\Utilities\EventHandlers\ExceptionEventHandler.cs" />
+    <Compile Include="Classes\Utilities\ImageManipulation\ImageFast.cs" />
+    <Compile Include="Classes\Utilities\ImageManipulation\JPEGHelper.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\AssetTypeToStringConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\DetectXamlImportStatusImageConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\DetectXamlImportStatusTextConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\FormattingConverter.cs" />
+    <Compile Include="Classes\Interfaces\IAcceptsControls.cs" />
+    <Compile Include="Classes\Interfaces\IUsesAssets.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\ExistsTextToBooleanConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\FrameToIAcceptsImageBackgroundSourceConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\HasXamlLoadedToBooleanConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\IAcceptsBackgroundImageToBooleanConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\IAcceptsControlsToBooleanConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\IAcceptsControlsToBooleanForXamlImportConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\ImageConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\ItemToBoolConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\PositionConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\RowBackgroundConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\ToStringEnumerationContributorConverters\ToStringEnumerationComposerConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\ToStringEnumerationContributorConverters\ToStringEnumerationDesignerConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\ToStringEnumerationContributorConverters\ToStringEnumerationDeveloperConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\ToStringEnumerationContributorConverters\ToStringEnumerationDirectorConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\ToStringEnumerationContributorConverters\ToStringEnumerationProducerConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\ToStringEnumerationContributorConverters\ToStringEnumerationSpeakerConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\ToStringEnumerationTagConverter.cs" />
+    <Compile Include="Classes\Utilities\Exceptions\ProducerAlphaException.cs" />
+    <Compile Include="Classes\Utilities\IO\WayvFS.cs" />
+    <Compile Include="Classes\Utilities\Layout\LayoutSettings.cs" />
+    <Compile Include="Classes\Utilities\LinqExtensions\LinqExtensionMethods.cs" />
+    <Compile Include="Classes\Utilities\Validators\DateFormatRegex.cs" />
+    <Compile Include="Classes\Utilities\Validators\RegexValidationRule.cs" />
+    <Compile Include="Classes\Utilities\Validators\RegexValidator.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\XamlLinks\XamlLinkCreateLinkButtonVisibilityConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\XamlLinks\XamlLinkRemoveLinkButtonVisibilityConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\XamlLinks\XamlLinkRemoveXamlButtonVisibilityConverter.cs" />
+    <Compile Include="Classes\Utilities\XamlConverters\XamlLinks\XamlLinkUpdateLinkButtonVisibilityConverter.cs" />
+    <Compile Include="Classes\WayvControls\MoreMenu.cs" />
+    <Compile Include="Classes\WayvControls\OverLink.cs" />
+    <Compile Include="Classes\Business Objects\Frames\PageFrame.cs" />
+    <Compile Include="Classes\Business Objects\Frames\PageShot.cs" />
+    <Compile Include="Classes\Business Objects\Credits.cs" />
+    <Compile Include="Components\Adorners\VideoAdorner.cs" />
+    <Compile Include="Components\BottomBar\BottomBar.xaml.cs">
+      <DependentUpon>BottomBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Adorners\CircleAdorner.cs" />
+    <Compile Include="Components\CircularProgressBar\CircularProgressBar.xaml.cs">
+      <DependentUpon>CircularProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\DraggingCanvas\DraggingCanvas.cs" />
+    <Compile Include="Components\ErrorReporter\ErrorReporter.xaml.cs">
+      <DependentUpon>ErrorReporter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\IdentityBar\IdentityBar.xaml.cs">
+      <DependentUpon>IdentityBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\NewDialog\NewDialog.xaml.cs">
+      <DependentUpon>NewDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ThreeStateToggleButton\ThreeStateToggleButton.cs" />
+    <Compile Include="Components\VideoPlayer\VideoPlayer.xaml.cs">
+      <DependentUpon>VideoPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WaitForPublishDialog\WaitForPublishDialog.xaml.cs">
+      <DependentUpon>WaitForPublishDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WebChannelSelector\WebChannelSelector.xaml.cs">
+      <DependentUpon>WebChannelSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Welcome\Welcome.xaml.cs">
+      <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\enumMainAppModes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmMain.xaml.cs">
+      <DependentUpon>frmMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\RichTextBox\BindableRichTextBox.cs" />
+    <Compile Include="Components\RichTextBox\DataBindingProxy.cs" />
+    <Compile Include="Classes\Business Objects\Question.cs" />
+    <Compile Include="Classes\Business Objects\Show.cs" />
+    <Compile Include="Classes\Business Objects\Tag.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.xaml.cs">
+      <DependentUpon>Startup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Temporal Tests\Temp.xaml.cs">
+      <DependentUpon>Temp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\WayvControls\Tintifier.cs" />
+    <Compile Include="Classes\Business Objects\Frames\VideoFrame.cs" />
+    <Compile Include="Classes\WayvControls\WatchClip.cs" />
+    <Compile Include="Classes\Business Objects\Frames\WebSlide.cs" />
+    <Page Include="Components\BottomBar\BottomBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\CircularProgressBar\CircularProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\ErrorReporter\ErrorReporter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\IdentityBar\IdentityBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\NewDialog\NewDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Components\VideoPlayer\VideoPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\WaitForPublishDialog\WaitForPublishDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\WebChannelSelector\WebChannelSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\Welcome\Welcome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTemplates\ScriptPanelDataTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\Expressive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\CheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\ComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\ContextMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Custom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Custom\DropdownButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Custom\ThreeStateToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Expander.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\GridSplitter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\GroupBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Label.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\ListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\ListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\PasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\ProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\RadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\RichTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\ScrollBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Slider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\StatusBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\TabControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\TextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\TextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\ToggleButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Toolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Toolbar\ToolbarButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Toolbar\ToolbarCheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Toolbar\ToolbarComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Toolbar\ToolbarRadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Toolbar\ToolbarTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\Toolbar\ToolbarToggleButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\ToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Controls\TreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\ExpressiveControls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\Expressive\ExpressiveResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\Expressive\Resources\Brushes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\Expressive\Resources\GeneralStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Startup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Temporal Tests\Temp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Assets\Bitmaps\NewDialog\WayvLogoForNewDialog.png" />
+    <Resource Include="Assets\Icons\NewDialog\CloseButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\MainToolbar\ToolbarControls\VolumeOff.png" />
+    <Resource Include="Assets\Icons\MainToolbar\ToolbarControls\VolumeOn.png" />
+    <Resource Include="Assets\Icons\WayvIcon.png" />
+    <Resource Include="Temporal Tests\ScreenShots\ShowPaneMetadata1.jpg" />
+    <Resource Include="Temporal Tests\ScreenShots\ShowPaneMetadata2.jpg" />
+    <Resource Include="Assets\Icons\MainToolbar\Publish\Preview.png" />
+    <Resource Include="Assets\Icons\MainToolbar\Publish\Publish.png" />
+    <Resource Include="Assets\Icons\MainToolbar\Controls\Watchclip.png" />
+    <Resource Include="Assets\Icons\MainToolbar\Controls\Tintify.png" />
+    <Resource Include="Assets\Icons\MainToolbar\Controls\MoreMenu.png" />
+    <Resource Include="Assets\Icons\MainToolbar\Controls\ZoomPan.png" />
+    <Resource Include="Assets\Icons\MainToolbar\Controls\AnimateText.png" />
+    <Resource Include="Assets\Icons\MainToolbar\ToolbarControls\ZoomToExtents.png" />
+    <Resource Include="Assets\Icons\MainToolbar\ToolbarControls\RecordingOff.png" />
+    <Resource Include="Assets\Icons\MainToolbar\ToolbarControls\RecordingOn.png" />
+    <Resource Include="Assets\Icons\ScriptItemDataTemplate\FrameTypes\VideoFrameIcon.png" />
+    <Resource Include="Assets\Icons\ScriptItemDataTemplate\FrameTypes\WebSlideIcon.png" />
+    <Resource Include="Assets\Icons\ScriptItemDataTemplate\Header\LockIcon.png" />
+    <Resource Include="Assets\Icons\ScriptItemDataTemplate\Header\PreviewIcon.png" />
+    <Resource Include="Assets\Icons\ScriptItemDataTemplate\Header\ToggleIconOff.png" />
+    <Resource Include="Assets\Icons\ScriptItemDataTemplate\FrameTypes\CPIcon.png" />
+    <Resource Include="Assets\Icons\ScriptItemDataTemplate\FrameTypes\PageShotIcon.png" />
+    <Resource Include="Assets\Icons\ScriptItemDataTemplate\FrameTypes\PageFrameIcon.png" />
+    <Resource Include="Assets\Bitmaps\ScriptItemDataTemplate\ConversationalPollThumb.png" />
+    <Resource Include="Assets\Bitmaps\ScriptItemDataTemplate\ImageThumb.png" />
+    <Resource Include="Assets\Bitmaps\ScriptItemDataTemplate\PageFrameThumb.png" />
+    <Resource Include="Assets\Bitmaps\ScriptItemDataTemplate\PageshotThumb.png" />
+    <Resource Include="Assets\Bitmaps\ScriptItemDataTemplate\VideoThumb.png" />
+    <Resource Include="Assets\Bitmaps\Welcome\WelcomeHeader.png" />
+    <Resource Include="Assets\Icons\MainToolbar\Controls\ImageBackground.png" />
+    <Resource Include="Assets\Icons\MainToolbar\Controls\XamlFromBlend.png" />
+    <Resource Include="Assets\Icons\MainToolbar\NVideo\NVideo.png" />
+    <Resource Include="Assets\Bitmaps\ViewPane\NVideoPlaceHolder.png" />
+    <Resource Include="Assets\Icons\MainToolbar\ChannelImage\ChannelImage.png" />
+    <Resource Include="Assets\Bitmaps\ViewPane\IAcceptsImageBackgroundFramePlaceHolder.jpg" />
+    <Resource Include="Assets\Bitmaps\ViewPane\FramePlaceHolder.jpg" />
+    <Resource Include="Assets\Bitmaps\ViewPane\ChannelPlaceHolder.png" />
+    <Resource Include="Assets\Icons\MainToolbar\FrameAnimation\FrameAnimatingOff.png" />
+    <Resource Include="Assets\Icons\MainToolbar\FrameAnimation\FrameAnimatingOn.png" />
+    <Resource Include="Assets\Icons\ErrorReporter\XamlError.png" />
+    <Resource Include="Assets\Bitmaps\Controls\MoreMenuStunt.png" />
+    <Resource Include="Assets\Icons\XamlLinks\Error.png" />
+    <Resource Include="Assets\Icons\XamlLinks\Info.png" />
+    <Resource Include="Assets\Icons\XamlLinks\Warning.png" />
+    <Resource Include="Assets\Icons\SyncLinks\AddMarker.png" />
+    <Resource Include="Assets\Icons\SyncLinks\RemoveMarker.png" />
+    <Resource Include="Assets\Bitmaps\Comps\AnimationEngine.jpg" />
+    <Resource Include="Assets\Icons\ScriptItemDataTemplate\Header\GoToSyncLinkDisabled.png" />
+    <Resource Include="Assets\Icons\ScriptItemDataTemplate\Header\GoToSyncLinkNormal.png" />
+    <Resource Include="Assets\Icons\ScriptItemDataTemplate\Header\GoToSyncLinkPressed.png" />
+    <Content Include="Temporal Tests\Webslide1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web References\DirectoryServer\DirectorySuscriptions.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Diagrams\ClassDiagram.cd" />
+    <None Include="ProducerAlpha_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\DirectoryServer\DirectorySuscriptions.wsdl" />
+    <None Include="Web References\DirectoryServer\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\DirectoryServer\WebChannelInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:50993/WebServices/DirectorySuscriptions.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DirectoryServer\</RelPath>
+      <UpdateFromURL>http://localhost:50993/WebServices/DirectorySuscriptions.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ProducerAlpha_DirectoryServer_DirectorySuscriptions</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPDXMLib">
+      <Guid>{73F0DD5C-D071-46B6-A8BF-897C84EAAC49}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

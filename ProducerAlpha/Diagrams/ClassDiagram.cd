@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProducerAlpha.App" Collapsed="true">
+    <Position X="14.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KEAAAKAAAAAABAAAAkAAAAAAQAEQABECAEAAAAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Script">
+    <Position X="21" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAACSEQBQBBAAUAEISCACAQggAECCIAAAAgAAAAgAsA=</HashCode>
+      <FileName>Classes\Business Objects\Script.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProducerAlpha.Scripts" Collapsed="true">
+    <Position X="19.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Collections\Scripts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.BindableRichTextBox" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAEAACAAAAAAAAAAA=</HashCode>
+      <FileName>Components\RichTextBox\BindableRichTextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.DataBindingProxy" Collapsed="true">
+    <Position X="16.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAABAAAAACA=</HashCode>
+      <FileName>Components\RichTextBox\DataBindingProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.frmMain" Collapsed="true">
+    <Position X="14.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8ghKV9g/xHRbdCqNxdozkijR+tm/Ri3cEnpQ3f9D3ho=</HashCode>
+      <FileName>frmMain.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlphaPrototype.Temp" Collapsed="true">
+    <Position X="14.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Temporal Tests\Temp.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Contributor" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAQAAAAEAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Abstract\Contributor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Producer">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Contributors\Producer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Director">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Contributors\Director.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Designer">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Contributors\Designer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Speaker">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Contributors\Speaker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Composer">
+    <Position X="0.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Contributors\Composer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Developer">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Contributors\Developer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Frame">
+    <Position X="11.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACAiBAAAQAQAKEAAIAAAAAAAgAAAAAAAAAEAAAAhAgA=</HashCode>
+      <FileName>Classes\Business Objects\Abstract\Frame.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProducerAlpha.Tag" Collapsed="true">
+    <Position X="19.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Tag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.WebSlide">
+    <Position X="5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAABAABAAAAAQAAgAACAAAAAgAAAAQAA=</HashCode>
+      <FileName>Classes\Business Objects\Frames\WebSlide.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ProducerAlpha.Asset" Collapsed="true">
+    <Position X="19.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAIAQAEAAAAQAIAAAQC0AAAAJAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Asset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Control">
+    <Position X="6.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Abstract\Control.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.WatchClip">
+    <Position X="5.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WayvControls\WatchClip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.MoreMenu">
+    <Position X="10" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WayvControls\MoreMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Tintifier">
+    <Position X="7.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WayvControls\Tintifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.OverLink">
+    <Position X="3.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WayvControls\OverLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.VideoFrame">
+    <Position X="2.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAABAABAAAAAQAAgAAGAAAABgAAAAQAA=</HashCode>
+      <FileName>Classes\Business Objects\Frames\VideoFrame.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ProducerAlpha.PageShot">
+    <Position X="7.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAQAAAIACAACAAgAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Frames\PageShot.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.117" />
+  </Class>
+  <Class Name="ProducerAlpha.PageFrame">
+    <Position X="9.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Frames\PageFrame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.ConversationalPoll">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAABAAAAAAAAAAAgAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Classes\Business Objects\Frames\ConversationalPoll.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProducerAlpha.Question" Collapsed="true">
+    <Position X="19.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Answer" Collapsed="true">
+    <Position X="19.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Business Objects\Answer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Show">
+    <Position X="16.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>oQJiBKQEQACAKEwAAAgAAEQIBABAEEARAGDAAYEAAgE=</HashCode>
+      <FileName>Classes\Business Objects\Show.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProducerAlpha.Credits">
+    <Position X="14.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABBACEAAQBBAAAAQAABAAgAAQAAAAQAAAAEAAAAQ=</HashCode>
+      <FileName>Classes\Business Objects\Credits.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ProducerAlpha.IAcceptsControls" Collapsed="true">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Classes\Interfaces\IAcceptsControls.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProducerAlpha.IUsesAssets" Collapsed="true">
+    <Position X="14.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Classes\Interfaces\IUsesAssets.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="ProducerAlpha.Operation" Collapsed="true">
+    <Position X="14.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components\RichTextBox\DataBindingProxy.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

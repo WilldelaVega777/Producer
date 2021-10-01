@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="ProducerAlpha.exe" version="1.1.0.0" publicKeyToken="4b2549e1b3dde965" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ProducerAlpha" version="0.7.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ProducerAlpha.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Expression.Encoder" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="x86" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Expression.Encoder.Types" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="x86" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Expression.Encoder.Utilities" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="x86" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.Design" version="3.5.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ionic.Zip.dll" size="500736">
+      <assemblyIdentity name="Ionic.Zip" version="1.8.4.24" publicKeyToken="EDBE51AD942A3F5C" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>nmwwUD2fBukYuHTv7JTNxmkW1WA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mindscape.WpfPropertyGrid.dll" size="291328">
+      <assemblyIdentity name="Mindscape.WpfPropertyGrid" version="2.0.571.9838" publicKeyToken="0F2F2E3BF9B0527C" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>hwgirbHWf5bdXdfLOgU43agmXeg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mindscape.WpfPropertyGrid.Design.dll" size="8704">
+      <assemblyIdentity name="Mindscape.WpfPropertyGrid.Design" version="2.0.571.9838" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>mnynIwfoQaKVCDsB3fcrC82JbUM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ookii.Dialogs.Wpf.dll" size="107696">
+      <assemblyIdentity name="Ookii.Dialogs.Wpf" version="1.0.0.0" publicKeyToken="0C15020868FD6249" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>o7M7yMmWP3J7wqJxTsbeDGB7ykA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProducerAlpha.exe" size="944640">
+      <assemblyIdentity name="ProducerAlpha" version="0.7.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Gf/x9v75LDjvgvjZis960X0CAJ8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimelineController.dll" size="89600">
+      <assemblyIdentity name="TimelineController" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>FuxqxcgYpMqtz7FgAOb5AkcpyEQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wpf.SplitButton.dll" size="50688">
+      <assemblyIdentity name="Wpf.SplitButton" version="1.1.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>CrAUQ3paTlL7V5KUtrg7A/jQuCM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ProducerAlpha.exe.config" size="812">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>wfJaTtNZekja9mgJHr5q95bsgJg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Temporal Tests\Webslide1.jpg" size="39521">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>VuVOYmmnz+1b/mWIOh2qsGhFKgI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=WVHome\William" issuerKeyHash="87324bba66cc5fe462ff1f87464fdff51a5b03dc" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>OCpuF81F1QpK27KQ6okgLyqT5Kw=</DigestValue></Reference></SignedInfo><SignatureValue>GFIJ9fRmxfTmxlctJIgUPRX8fHKNGETVzkMVO+ZN36Ph+EVApPTyO1/4t1rLog+86IuKOHzxuvHqgV/cwcyVuJbuw63J2xK7abw2J/hBYzLuf+a1j8nHHj0FWprPCQo5zZGgMC9wg6yVN7iB9WHokrxEPn/KTyoRqlh8M6QvJbM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>lPtJo0713vzFOqRZcpA+e/JljtcsSKQf5llcU3nCNd9PlX+cl04oW7rnV4bmdy2ESJT2rL9GeSlyZjc3qrLOgqGigMQ9xmbbr1Mitwck+6AmjlHbI1pbb78F3wnwr28Qn+vwhMSWl1oClW1SfbZhk6kcYJq+TRBgC64X3IWuj4c=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ace4932a2f2089ea90b2db4a0ad545cd176e2a38" Description="" Url=""><as:assemblyIdentity name="ProducerAlpha.exe" version="1.1.0.0" publicKeyToken="4b2549e1b3dde965" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=WVHome\William</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>xGsLg+kpvn/PhfZPPYMuHuaVHjk=</DigestValue></Reference></SignedInfo><SignatureValue>Njsp8/+PN6BpiOh0YfrpQuxuBwQnOBQLaBRKCBjLkSXgWsfqax/KS5HIJfwdPBztVSw6qZwXWy4VAv8UI648pfctiUBwztkJPH8Th0z2INRIBGZeVWdltH9l15HH6gS44VRrTTa7O0u0h41m5amGBi3F0HMgXqC+xAN6JmD5xuo=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>lPtJo0713vzFOqRZcpA+e/JljtcsSKQf5llcU3nCNd9PlX+cl04oW7rnV4bmdy2ESJT2rL9GeSlyZjc3qrLOgqGigMQ9xmbbr1Mitwck+6AmjlHbI1pbb78F3wnwr28Qn+vwhMSWl1oClW1SfbZhk6kcYJq+TRBgC64X3IWuj4c=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQXA7iH+6XqahFL8fm20a8oTANBgkqhkiG9w0BAQUFADAnMSUwIwYDVQQDHhwAVwBWAEgAbwBtAGUAXABXAGkAbABsAGkAYQBtMB4XDTA5MDIxOTAyNTMyNFoXDTEwMDIxOTA4NTMyNFowJzElMCMGA1UEAx4cAFcAVgBIAG8AbQBlAFwAVwBpAGwAbABpAGEAbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAlPtJo0713vzFOqRZcpA+e/JljtcsSKQf5llcU3nCNd9PlX+cl04oW7rnV4bmdy2ESJT2rL9GeSlyZjc3qrLOgqGigMQ9xmbbr1Mitwck+6AmjlHbI1pbb78F3wnwr28Qn+vwhMSWl1oClW1SfbZhk6kcYJq+TRBgC64X3IWuj4cCAwEAATANBgkqhkiG9w0BAQUFAAOBgQAGqynLqRxgbsoJj/FUbScOfbWcb0sgcwIi58NH26FpOyQj6DCRHfERO+2Gw5Hvef+u+uyoswI9n6vIOJRGSwpVNr71r0dYzVKLDk4yTg9FJxYh3kmAg5uS8FqGVR23b+0vl6LpNerq9V6NMxVhone6kbP6nWMY8sEyf63WyCFU5g==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
